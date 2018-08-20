@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - 4 termin petlje</title> 
+		<script src="#" type="text/javascript"></script>
+		<script>
+	
+		</script>
+	</head>
+	<body>
+		<script>
+			/*
+			document.write('<ul>');
+			
+			for(var i=0; i<10; i++){
+				if (i==5|| i>7){
+					continue; //preskoci 5
+					//break; //prekini
+				}
+				document.write('<li>'+i+'</li>');
+			}
+			document.write('</ul>');
+			
+			
+			
+			for(var i=10; i>0; i--){
+				document.write(i+'<br/>');
+			}
+			
+			*/
+			//document.write('<div style ="width:640px; height:640px; border:2px solid red;">');
+				
+					//Prvi nacin za sahovsku tablu
+					
+					/*
+					for(var i =1;i<=72; i++){
+					if(i==9||i==18||i==27||i==36||i==45||i==54||i==63||i==72){continue;}
+					if(i%2==0){
+					document.write('<div style="width:80px; height:80px; float:left; background:yellow;color:black;"></div>');
+					}
+					if(i%2!=0){
+						document.write('<div style="width:80px; height:80px; float:left; background:red; color:black;"></div>');
+					}
+					*/
+					//Drugi nacin za sahovsku tablu
+					/*
+					for(var i =1;i<=64; i++){
+					if((i>=1&&i<=8)||(i>=17&&i<=24)||(i>=33&&i<=40)||(i>=49&&i<=56)){
+						if(i%2==0){
+						document.write('<div style="width:80px; height:80px; float:left; background:black;color:black;"></div>');
+						}
+						if(i%2!=0){
+							document.write('<div style="width:80px; height:80px; float:left; background:yellow; color:black;"></div>');
+						}
+					}
+					if((i>=9&&i<=16)||(i>=25&&i<=32)||(i>=41&&i<=48)||(i>=57&&i<=64)){
+						if(i%2==0){
+						document.write('<div style="width:80px; height:80px; float:left; background:yellow;color:yellow;"></div>');
+						}
+						if(i%2!=0){
+							document.write('<div style="width:80px; height:80px; float:left; background:black; color:black;"></div>');
+						}
+					}
+				}
+				*/
+			//document.write('</div>');
+			//tablica mnozenja
+			/*
+			var boja='yellow';
+			
+			document.write('<table border="1" width="50%"> ');
+			for(var i=1; i<=10; i++){
+			
+			boja=(boja=='yellow')?'green':'yellow';
+			
+				document.write('<tr style="background:'+boja+';">');
+			
+				for (var j=1; j<=10; j++){
+				
+					document.write('<td>'+j*i+'</td>');
+				}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+			*/
+			
+			var boja='yellow';
+			document.write('<div style="width:640px; height:640px; border: 2px solid red;">');
+			for(var i=1; i<=64; i++){
+				if(i==9||i==25||i==41||i==57){boja='black'}
+				if(i==17||i==33||i==49){boja='white'}
+				boja=(boja=='black')?'white':'black';//ternarni operator 
+				document.write('<div style="width:80px; height:80px; float:left; background:'+boja+'; color:yellow;"></div>');
+				
+			}
+			document.write('</div>');
+			
+			
+
+		</script>
+	</body>
+	
+</html>
+	

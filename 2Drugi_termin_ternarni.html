@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - drugi termin</title> 
+		<script src="script/javascript.js" type="text/javascript"></script>
+		<script>
+	
+		</script>
+	</head>
+	<body>
+		<script>
+			var auto='Ford';
+			var model='C klasa' ;
+			var snaga=450;
+			/*
+			if (auto=='Mercedes'){
+				if(model=='C klasa'){
+					if (snaga=='450'){
+					document.write('To je Mercedes C klase i snage 450KW');
+					}else {
+					document.write('To nije ta snaga')
+					}
+				} else {
+					document.write('To nije taj model')
+					}
+			}
+			*/
+			/*switch je isto sto i if */
+			switch(auto){
+				case 'Mercedes':
+				case 'VolksWagen':
+				case 'Audi':
+				case 'Opel':
+				document.write('Nemacki proizvodjac');
+				break;
+				case 'Ford':
+				document.write('Ford');
+				break;
+				case 'Peugeot':
+				document.write('Pezo');
+				break;
+				default:
+				document.write('Neki drugi proizvodjac');
+				break;
+			}
+			
+			switch(snaga){
+				case 450:
+					document.write('<br/>Snaga je 450');
+				break;
+				case 350:
+					document.write('<br/>Snaga je 350');
+				break;
+				case 250:
+					document.write('<br/>snaga je 250');
+				break;
+				default:
+				document.write('Nekdruga snaga');
+				break;
+			}
+			//ovo je kad imamo u jednom redu ternarni operator najprostiji vid
+			var rezultat=(snaga>350)?'snaga je veca od 350':'Snaga je manja od 350';
+			document.write('<br/>'+rezultat);
+		</script>
+	</body>
+	
+</html>
+	
