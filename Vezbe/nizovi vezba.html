@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Nizovi vezba</title>
+		<script src="#" type="text/yavascript"></script>
+		<style>
+		
+		</style>
+	
+	</head>
+	<script>
+		var niz=new Array(4,2,6,3,19,55,6,26,11,6,22,6,9);
+		
+		document.write('Pocetni niz  :  '+niz);
+		var j=0;
+		var k=0;
+		for (i=0; i<niz.length; i++){
+	
+			if (niz[i]==4){			
+				j=i;
+				}
+			
+			if (niz[i] == 3){
+				k=i;
+				}
+		
+		}
+		niz1 = niz.splice(j,1,3)
+		niz1 = niz.splice(k,1,4)
+		document.write('<br/> 3 i 4 zamena: '+niz);
+		
+		var sort_niz = niz.sort(function(a,b){return b-a});
+		document.write('<br/>Sortiranje desc: '+niz);
+		
+		
+		niz.splice(6,0,34);
+		document.write('<br/>Ubacujem 34 na 6 poz: '+niz);
+		
+		for(i=0; i<niz.length; i++){
+			if (niz[i]==19){
+				delete niz[i];
+				document.write('<br/>Izbaci 19 : '+niz);
+			}
+		
+		}
+		
+		//niz.splice(3,1,19);//vracam 19
+		
+		var sestica=new Array();
+		for(var i in niz){
+			if (niz[i]==6){
+				sestica.push(i);
+			}
+		}
+		
+		for (var i in sestica){
+			niz.splice(sestica[i],0,6);
+			}
+		document.write('<br/>Dupliraj sestice : '+niz);
+		
+		var maxi=0
+		var mini=999;
+		var j=0;
+		var k=0;
+	
+		for (var i in niz){
+			if (niz[i]>maxi){
+				maxi=niz[i];
+				j=i;
+			}
+		}
+		
+		for (i=0; i<niz.length; i++){
+			if(niz[i] <mini){
+					mini= niz[i];
+					k=i;					
+			}
+		}
+		
+		niz.splice(k,1,maxi);
+		niz.splice(j,1,mini);
+		document.write('<br/>Zamenjeni min i max: '+niz );
+		
+		niz.push(67);
+		document.write('<br/>Dodao 67 na kraj: '+niz );
+		
+		var b=new Array();
+		var a=new Array();
+		for(var i=0; i<niz.length; i++){
+			 if(niz[i]%2==0){
+				b.push(niz[i]);
+				
+				}
+			}
+		for(var i=0; i<niz.length; i++){
+			 if(niz[i]%2!=0){
+				a.push(niz[i]);
+				
+				}
+			}
+		document.write('<br/>Niz neparni: '+a);
+		document.write('<br/>Niz parni: '+b);
+		
+		var dodatak=new Array(10,3,7,1,20);
+		var spojeni= niz.concat(dodatak);
+		document.write('<br/>Spajanje dva niza: '+spojeni);
+		
+		var parni=new Array();
+		var neparni=new Array();
+		for(var i=0; i<spojeni.length; i++){
+			 if(spojeni[i]%2==0){
+				parni.push(spojeni[i]);
+				
+				}
+			}
+		for(var i=0; i<spojeni.length; i++){
+			 if(spojeni[i]%2!=0){
+				neparni.push(spojeni[i]);
+				
+				}
+			}
+		document.write('<br/>Niz neparni: '+neparni);
+		document.write('<br/>Niz parni: '+parni);
+		
+		var sort_niz = spojeni.reverse();
+		document.write('<br/>Reverse: '+spojeni);
+		
+		spojeni.splice(5,5);
+		document.write('<br/>Izbaci 5 clanova: '+spojeni);
+		
+		spojeni.sort(function(a,b){return b-a});
+		document.write('<br/>Sortirano desc: '+spojeni);
+		
+		spojeni.splice(spojeni.length - 4);
+		spojeni.splice(0,3);
+		
+		document.write('<br/>Izbaci prva i zadnja 3: '+spojeni);
+		
+		
+		
+		
+		
+	</script>
+
+
+</html>

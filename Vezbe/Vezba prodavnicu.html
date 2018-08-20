@@ -1,0 +1,37 @@
+<!doctype htm>
+	<html>
+		<head>
+			<title>Vezba - prodavnica</title>
+			<script src='#' type='text/javascript'></script>
+			<link rel='stylesheet' href='#' media ='all'/>
+			<style>
+			
+			</style>
+		</head>
+		<body>
+			<script>
+				var shopping = [ 'Eggs', 'Milk', 'Potatoes', 'Cereal', 'Eggs','Banana','Apples', 'Eggs' ];
+				document.write('<br/> <strong>Ovo je niz: </strong>'+shopping);
+				
+				//var string = String(shopping);
+				var string = shopping.join(" ");
+				document.write('<br/><strong> Niz konvertovan u string: </strong>'+string);
+				string=string.replace(/ /g,'-')
+				document.write('<br/><strong>Zamena blanko sa - : </strong>'+string);
+				shopping= string.split('-');
+				document.write('<br/><strong>String konvertovan u niz : </strong>'+shopping);
+				
+				var tekst = 'Da bi se programiralo, mora da se nauči programski jezik.';
+				document.write('<br/><strong>Rec nauči je poziciji broj : </strong>'+tekst.indexOf('nauči',0));
+				document.write('<br/><strong>Velike slova: </strong>'+tekst.toUpperCase());
+				document.write('<br/><strong>Poslednja pozicija slova a je: </strong>'+tekst.lastIndexOf('a'));
+				document.write('<br/><strong>Duzina stringa je: </strong>'+tekst.length);
+				var tekst2 = tekst.substring(tekst.indexOf('mora',0),tekst.indexOf('programski',0)+10);
+				document.write('<br/><strong>Novi string je: </strong>'+tekst2);
+				
+				document.write('<br/><strong>Crveno programiralo: </strong>'+tekst.replace('programiralo','PROGRAMIRALO'.fontcolor('red')));
+				
+				
+			</script>
+		</body>
+	</html>

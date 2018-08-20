@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+	<script>
+		function prikaz(){
+			var element=document.getElementsByTagName('li');
+			var z=element.length;
+			for(var i=0; i<zl i++){
+				var unos=prompt('Unesite zeljeni tekst!');
+				element[i].innerText=unos;
+				
+						}
+			}
+		</script>
+
+
+		<title>Dom elementi</title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<h1 id="naslov">Naslov</h1>
+		<p>Neki pasus, koji postoji</p>
+		<ul class="lista">
+			<li>Beograd</li>
+			<li>Nis</li>
+			<li>Novi Sad</li>
+			<li>Kragujevac</li>
+		</ul>
+		<button type="button" name="prikaz" onclick="prikaz()">Click to view text!</button>			
+					
+		
+	</body>
+	
+</html>

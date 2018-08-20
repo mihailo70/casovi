@@ -1,0 +1,10 @@
+var boja='yellow';
+		document.write('<div style="width:640px; height:640px; border: 2px solid red;">');
+		for(var i=1; i<=64; i++){
+				if(i==9||i==25||i==41||i==57){boja='black'}
+				if(i==17||i==33||i==49){boja='white'}
+				boja=(boja=='black')?'white':'black';
+				document.write('<div style="width:80px; height:80px; float:left; background:'+boja+'; color:yellow;"></div>');
+				
+			}
+		document.write('</div>');

@@ -1,0 +1,16 @@
+<!doctype htm>
+	<html>
+		<head>
+			<title>Vezba - prodavnica</title>
+			<script src='#' type='text/javascript'></script>
+			<link rel='stylesheet' href='#' media ='all'/>
+			<style>
+			
+			</style>
+		</head>
+		<body>
+			<script>
+			
+			</script>
+		</body>
+	</html>

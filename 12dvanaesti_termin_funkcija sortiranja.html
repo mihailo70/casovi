@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dvanaesti  termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+	<script>
+	
+		var ime1;// = prompt('Unesite vase ime:');
+	
+		function ime(name){
+			if(name=='Ana'){
+				document.write('Dobro jutro direktorice '+name);
+			} else if(name == 'Veljko'){
+			
+				document.write('Dobro jutro zamenice '+name);
+			}else{
+				document.write('Dobro jutro zaposleni '+name+'<br/>');
+			}
+		}
+		ime(ime1);
+		
+		function funkcija(radno_mesto, ime1){
+			document.write(ime1+',danas ste rasporedjeni na radno mesto '+radno_mesto);
+		
+		}
+		funkcija('blagajnik', ime1);
+		
+		function difoltno(naziv='radnik'){
+		
+			document.write('<br/>Funkcija koja koristi default vrednost'+naziv);
+		}
+		difoltno();
+		
+		function zbir(a,b=4){
+		var res=a+b;
+		return(res);
+		
+		}
+		var rezultat = zbir(3,undefined); //nedefinisana vrednost i uzima difoltnu vrednost
+		
+		document.write('<br/>'+rezultat);
+		
+		//anonimna funkcija kad nema naziv 
+		var g=function(broj){
+			document.write('<br/>Anonimna funkcija kad nema naziv: '+broj);
+		}
+		g(45);
+		
+		//funkcija sortiranja numerickog niza
+		var niz=[4,3,5,7,77,89];
+		niz.sort(function(a,b){
+			return a-b;
+			}
+		);
+		
+		document.write('<br/>Sortiranje niza kao numerik'+niz);
+		
+		//funkcija u funkciji
+		function broj(a,b){
+			var a=function(){
+				return a;
+			}
+			return a+b;
+		}
+		var y=broj(3,5);
+		document.write('<br/> funkcija u funkciji'+y);
+		
+		function broj(){
+			var a = 'lokalna promenljiva';
+			var m=function(){
+				var b='Vrednost promenljive a je'+a;
+			}
+			return m;
+		}
+		var n=broj();
+		document.write(n);
+		
+		
+		function html(a,b){
+			var strana = '<h1>Naslov strane</h1>';
+			strana+='<p>Neki pasus stranice</p>';
+			strana+='<table border=\'1\' width=\'30%\'><tr>';
+			strana+='<td>'+a+'</td><td>'+b+'</td></tr>';
+			strana+='</table>';
+			return strana;
+		}
+		var strana1=html('Jovan','Jovanovic');
+		document.write(strana1);
+		
+		
+	</script>
+	</body>
+	
+</html>

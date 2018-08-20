@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Through the Looking-Glass</title>
+	<script src="jq/jquery.js"></script>
+	<script src="01.js"></script>
+    <script src="listings/1.4.js"></script>
+	
+    <link rel="stylesheet" href="01.css" type="text/css" />
+	</head>
+	<body> 
+	<script>
+	var a=5;
+	var b=10;
+	function mnozenje(){
+		var c= a*b;
+		return c;
+	}
+	var rez=mnozenje();
+	document.write(rez);
+	
+	var broj=function stepen(a){
+		var a=Math.pow(a,2);
+		document.write('<p>'+a+'</p>');
+	}
+	broj(4);
+	
+	(function(a){
+		var a=Math.sqrt(a);
+		document.write(a);
+	})(6);
+	
+	var zbir=(a,b)=> a+b;
+	var ac=zbir(4,9);
+	document.write('<p>'+ac+'</p>');
+	
+	var ime=(i)=> document.write('<p>Nase ime je '+i+'</p>');
+	ime('Pera');
+	
+	/*function student(x){
+		var b='Student se zove '+x;
+		function ispit(y){
+			var c= b+'predmet' +y;
+			return b;
+		}
+		//return b;
+		document.write(b);
+		//document.write(c); 
+	}
+	document.write(student('Milan')('Matematika'));
+	*/
+	
+	function s(x){
+		var b='Student se zove '+x;
+		return function (k){
+			var c=b+ ', a predmet koji polaze je '+k;
+			return c;
+		}
+		//document.write(c);
+	}
+	var j=s('Ilija')('fizika');
+	document.write(j);
+	//alert(i);
+	</script>
+	</body>
+</html>

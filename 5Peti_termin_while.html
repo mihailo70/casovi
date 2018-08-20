@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - 5 termin polje nastavak</title> 
+		<script src="#" type="text/javascript"></script>
+		<style>
+			.polje{width:12.5%; height:80px; background:yellow;float:left;}
+			.polje2{width:12.5%; height:80px; background:black;float:left;color:white;}
+		</style>
+	</head>
+	<body>
+		<script>
+		//sahovska tabla
+		/*
+		var p='polje'
+			for(var i=1; i<=8; i++){
+				for(var j=1; j<=8; j++){
+				
+				if(j==1){
+				p=(p=='polje2')?'polje':'polje2';	
+				}
+				
+				p=(p=='polje')?'polje2':'polje';
+				document.write('<div class="'+p+'">'+j+'</div>');
+				}
+			}
+		*/
+		
+		//Hash oznake
+		/*
+		for(var j=1; j<= 5;j++){
+				if(j==1){
+					for (var k=0; k<5;k++){
+						document.write(' # ');
+					}
+				}
+				document.write('<br/> # ' );
+				for(var i = 1; i<=5; i++){
+					if (i==6-j){
+						document.write('<span style="color:red";>X</span>');//stampaj po dijagonali crveno
+					}
+					else{
+						document.write('<span style="color:black";>X</span>');
+					}
+					
+					
+				}
+				document.write('#  ');
+				if(j==5){
+					for(var n=0; n<5; n++){
+						if(n==0){
+							document.write('<br/>');
+						}
+						
+						document.write(' # ');
+					}
+				}
+			}
+	*/
+
+		var g=1;
+		while(g<=20){
+			if(g==5){
+			
+				break;
+				}
+			document.write(g+'<br/>');
+			g++;
+		}
+		
+		var k=1;
+		for(;k<=20;){//obavezno ; pre i posle varijable
+		document.write(k);
+		k++;
+		}
+		
+				
+		do{
+			document.write('k');//do ce da ostampa k bar jednom ne bitno da li je ispunjen uslov
+			k++;
+		
+		} while (k<=20);
+	
+		</script>
+	</body>
+	
+</html>

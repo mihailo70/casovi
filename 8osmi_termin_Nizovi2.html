@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<title>Nizovi drugi deo</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<script>
+		var brojevi=[4,2,7,3,15,66,33,1,90,55,72];
+		/*
+		var parni=new Array();
+		for(var i=0; i<brojevi.length; i++){
+			if(brojevi[i]%2==0){
+			parni[i]=brojevi[i];
+			
+			document.write('Niz parni: '+parni[i]+'<br/>');
+			}
+		
+		
+		//document.write('Niz brojevi: '+brojevi[i]+'<br/>');
+		}
+	*/
+		/*
+		//nadji najveci broj u nizu
+		var j=0
+		for (var i=0; i<brojevi.length; i++){
+		if (brojevi[i]>j){
+		
+		 j=brojevi[i];
+			}
+		}
+		
+		document.write('Najveci broj u nizu je: '+j);
+		*/	
+	/*
+	var povecan=new Array();
+			for ( var i =0; i<=6; i++){
+				povecan.push(brojevi);
+				document.write('<br/>Povecan '+i+': '+povecan);
+			
+			}
+			document.write(povecan);
+	*/
+	
+		for (var i = 0; i<brojevi.length; i++ ){
+			brojevi.push(brojevi[i]);
+			if(brojevi.length==20){
+			break;
+			}
+		document.write('Element niza: '+i+'<br/> '+brojevi[i]+'<br/>');
+		}
+	
+	</script>
+
+
+
+</body>
+</html>

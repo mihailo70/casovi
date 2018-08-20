@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Vezba Dom elementi </title>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+	<h1>Neki naslov za tekst</h1>
+	<p class="p"> Ovo je ponavljanje dom funkcije</p>
+	<p>Drugi red pasusa</p>
+	<p>treci red pasusa</P>
+	<p>cetvrti red pasusa</P>
+	<p>peti red pasusa</P>
+	<div id="okvir">
+		tekst za div	
+		<img src="../../images/slika1.jpg" alt="Neka slika" width="150px" height="150px">
+	</div>
+	<ul class="lista">
+		<li><a href="#">Meso</a></li>
+		<li><a href="#">Hleb</a></li>
+		<li><a href="#">Secer</a></li>
+	
+	</ul>
+	<button type="button" name="prikaz" onclick="prikaz()">Dugme ko dugme</button>
+	<script>
+		/*
+		var naslov=document.getElementsByTagName('h1')[0];
+		naslov=naslov.innerText
+		document.write('<strong><br/>Ovo je moj naslov :</strong>'+naslov);
+		naslov=naslov.innerText='Promenjeni naslov';
+		document.write('<br/><strong>Ovo je promenjeni naslov :</strong>'+naslov);
+		var pasus = document.getElementsByTagName('p');
+		document.write('<br/><strong>Broj pasusa :</strong>'+pasus.length);
+		*/
+		//ovo mi ne radi kako treba
+		
+		var element=document.getElementsByTagName('ul')[0];
+		var lista1=element.firstElementChild;
+		document.write('<br/> Sledeci'+lista1.innerHTML);
+		
+		var next = lista1.nextElementSibling;
+		next=next.innerText;
+		document.write('<br/> Sledeci'+next);
+		
+		/*
+		var h2=document.createElement('h2');
+		ha2=h2.innerText='neki novi podnaslov'
+		document.body.appendChild(h2);
+		h2.setAttribut('class','podnaslov');
+		*/
+		/*
+		var niz=['white','red','orange','pink','brown'];
+		for(u=0;u<10;u++){	
+			var tabela=document.createElement('table');
+			tabela.setAttribute('border',1);
+			tabela.setAttribute('width','50%');
+			document.body.appendChild(tabela);
+			tabela.setAttribute('align','center');
+			
+			var m=Math.round(Math.random()*niz.length);//slucajan izbor boje
+				
+				tabela.setAttribute('bgcolor',niz[m]);
+				for(var i=0; i<5; i++){
+				var red=document.createElement('tr');
+				tabela.appendChild(red);
+				
+				//boja=(boja=='red')?'yellow':'red';
+				//red.style.backgroundColor=boja;
+				
+				for(var j=0;j<5;j++){
+					var polje=document.createElement('td');
+					red.appendChild(polje);
+					polje.innerText=j;
+					}
+				//polje.setAttribute('bgcolor',niz[i]);
+			}
+			document.write('<br/>');
+			}
+		}	
+			*/
+
+				var tabela=document.createElement('table');
+				document.body.appendChild(tabela);
+
+				tabela.setAttribute('border',1);
+				tabela.setAttribute('width','50%');
+				
+				for(var i=0; i<5; i++){
+				var red=document.createElement('tr');
+				tabela.appendChild(red);
+					for(var j=0;j<5;j++){
+					var polje=document.createElement('td');
+					red.appendChild(polje);
+					polje.innerText=j;
+						}
+					}
+				
+	</script>
+	
+	</body>
+	
+</html>

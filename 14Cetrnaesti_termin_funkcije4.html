@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cetrnaesti termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+		<script>
+		//kreiram niz od slucajnih brojeva pomocu funkcije
+			var niz=new Array();
+			function broj(){
+				
+				for(i=0;i<10;i++){
+					var c=Math.round(Math.random()*100);
+					niz[i]=c;
+				
+				}	
+				for(vrednost in niz){
+					document.write(niz[vrednost]+'<br/>');
+			
+				} 
+			}
+			
+			broj();
+			 
+			 //izcitavam niz pomocu funkcije
+			 
+			 var grad=['Nis','London','Berlin','Beograd','Sombor'];
+			 function prikaz(a){
+			 for(i=0;i<a.length;i++){
+			 
+			 document.write((i+1)+'. Element:'+ a[i]+'<br/>');
+				}
+			 }
+			
+			prikaz(niz);
+			prikaz(grad);
+			
+			
+			var c;
+			function zbir(a,b,c=4){
+				var rez=a+b+c;
+				return(rez);
+			}
+			zbir(7,9);
+			
+			//document.write(rez);//ne radi jer lokalnu promenljivu kreiranu u funkciji ne mozes pozvati spolja C sam definisao spolja
+			
+			a=4;
+			b=6;
+			c=3;
+			rez= a+b+c;
+			document.write('<br/>'+rez);
+			
+			var d=5;
+			function stampa(){
+				var d=3;//ako napisem var onda je ovo nova promenljiva
+				//d=7;//menja mi globalnu promenljivu
+				return (d);
+				//document.write('<br/>'+d);
+			}
+			stampa();
+			document.write('<br/>'+d);
+			
+			
+			//funkciju ubacujemo u niz
+			var b=[10,2,3,11,5, stampa(),34,21, zbir(5,9)];
+			for(v in b){
+				document.write(b[v]+'<br/>');
+			}
+			
+		</script>
+	</body>
+	
+</html>

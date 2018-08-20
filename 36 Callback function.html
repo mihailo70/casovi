@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<title>Callback Funkcije Es6</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	</style>
+	</head>
+		<body>
+			<p id="prvi" class="pasus">tekst</p>  <!--sve moze biti i klasa i id-->
+		<script>
+			var niz=[1990,2010,1968,1999,1983,1975];
+			function proracun(arr,fn){
+				var godine=[];
+				for(var i=0;i<arr.length;i++){
+					godine.push(fn(arr[i]));
+				}
+				return godine;
+			}
+			
+			function calcAges(element){
+				return 2018-element;
+			}
+			
+			function HartRate(element){
+				if(element>=18&& element<=80){
+					return Math.round(210-(0.67*element));
+				}else{
+					return 'Nije moguce odrediti';
+				}
+			}
+			function isFullAge(element){
+				return element>=18;
+			}
+			
+			var broj_godina=proracun(niz,calcAges);
+			for(var element in broj_godina){
+				document.write('Osoba'+parseInt(element+1)+':'+broj_godina[element]+' godina<br/>');
+			}
+			
+			var punoletstvo=proracun(broj_godina,isFullAge);
+			for(var e1 in punoletstvo){
+				document.write('punoletni su:' +punoletstvo[e1]+'<br/>');
+			}
+			
+			var otkucaji= proracun(broj_godina,HartRate);
+			for(var i=0; i<otkucaji.length;i++){
+				document.write(otkucaji[i]+'<br/>');
+			}
+			
+			function interest(job){
+				if(job=="developer"){
+					return function(name){
+						return '<p>Cao '+name+' tvoj posao je da budes '+job+'!</p>';
+					}
+				}else if(job=='Designer'){
+					return function(name){
+						return '<p>Ti si dobar '+job+' hvala ti '+name+'!</p>';
+					}
+				}else{
+						return function(name){
+							return '<p>'+name+' tvoja profesija je neka druga!</p>';
+						}
+					}
+				}
+			
+			
+			
+			var programer=interest('developer');//pozivam funkciju interest 
+			document.write(programer('Sima'));//prosledjujem parametar za podfunkciju
+			
+			var dizajner=interest('Designer');
+			document.write(dizajner('Jelena'));
+		
+			var professor=interest('professor');
+			document.write(professor('Milan'));
+			
+			document.write(interest('developer')('Misa'));//mogli smo i ovako da pozivamo callback funkciju
+		</script>
+		</body>
+	
+</html>

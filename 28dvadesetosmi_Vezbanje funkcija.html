@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Vezbanje funkcije Dvadeset osmi</title>
+		
+	</head>
+	<body>
+	<script>
+		//prva varijanta klasicna function statesment
+		a=5;
+		b=10;
+		
+		function mnozenje(){
+			var c=a*b;
+			return c;
+		}
+		
+		var rezultat = mnozenje();
+		document.write('<strong>'+rezultat+'<strong/>');
+		
+		//II function extension dodeljivanje funkcije nekoj promenljivoj
+		var broj = function stepen(a){
+			var a=Math.pow(a,2);
+			document.write('<br/>'+a);
+		}
+		
+		broj(4);
+		//anonimna bez imena
+		var broj = function (a){
+			var a=Math.pow(a,2);
+			document.write('<br/>'+a);
+		}
+		
+		broj(4);
+		
+		//III samopozivajuca direktna direct function
+		(function(a){
+			var a=Math.sqrt(a);
+			document.write('<br/>'+a);
+		})(6);
+		
+		//IV arrow najprostiji oblik funkcije
+		var zbir=(a,b)=>{return a+b;}
+		var ac=zbir(4,9);
+		document.write('<br/>'+ac);
+		
+		var ime=(i)=>'Nase ime je '+i;
+		document.write('<p><br/>'+ime('Pera')+'</p>');
+		
+		var ime=(i)=>document.write('<p>Nase ime je '+i+'</p>');
+		ime('Zika');
+		
+		//V funkcija u funkciji
+		function s(x){
+		var b='Student se zove '+x;
+		return function (k){
+			var c=b+ ', a predmet koji polaze je '+k;
+			return c;
+		}
+		//document.write(c);
+	}
+	var j=s('Ilija')('fizika');
+	document.write(j);
+	
+		function student(x){
+			var b='Student se zove '+x;
+			
+			return function ispit(y){
+				var c= b+'Polaze ispit ' +y;
+				return c;
+			}
+			
+			
+		}
+		var j=student('Milan')('Matematika');
+		document.write('<br/>'+j);
+		
+		
+	</script>
+	
+	</body>
+	
+</html>

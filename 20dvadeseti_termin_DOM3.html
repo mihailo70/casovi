@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Dom elementi Dvadeset</title>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+		<script>
+		var niz=['white','red','orange','pink','brown'];
+		for(u=0;u<10;u++){	
+			var tabela=document.createElement('table');
+			tabela.setAttribute('border',1);
+			tabela.setAttribute('width','50%');
+			document.body.appendChild(tabela);
+			tabela.setAttribute('align','center');
+			
+			var m=Math.round(Math.random()*niz.length);//slucajan izbor boje
+				//tabela.setAttribute=niz[k];
+				tabela.setAttribute('bgcolor',niz[m]);
+			
+			
+			/*
+			var boja;
+			
+			switch(boja){
+				case 'green':
+					tabela.style.backgroundColor='green';
+				break;
+				case 'red':
+				tabela.style.backgroundColor='red';
+				break;
+				case 'orange':
+				tabela.style.backgroundColor='orange';
+				break;
+				case 'pink':
+				tabela.style.backgroundColor='pink';
+				break;
+				default:
+				tabela.style.backgroundColor='brown';
+				break;
+			}
+			
+			tabela.setAttribute('bgcolor',boja);
+			*/
+			for(var i=0; i<5; i++){
+				var red=document.createElement('tr');
+				tabela.appendChild(red);
+				
+				//boja=(boja=='red')?'yellow':'red';
+				//red.style.backgroundColor=boja;
+				
+				for(var j=0;j<5;j++){
+					var polje=document.createElement('td');
+					red.appendChild(polje);
+					polje.innerText=j;
+					}
+				//polje.setAttribute('bgcolor',niz[i]);
+			}
+			document.write('<br/>');
+		}	
+		</script>
+	
+	</body>
+	
+</html>

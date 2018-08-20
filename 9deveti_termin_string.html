@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>Deveti termin - string</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+	<script>
+		var dan='Danas je lep i suncan dan. Ovakav dan dugo nije bio u maju!';
+		document.write(dan);
+		document.write('<br/>Duzina stringa je:'+dan.length);
+		document.write('<br/><strong>Velike slova: </strong>'+dan.toUpperCase());
+		document.write('<br/><strong>Mala slova: </strong>'+dan.toLowerCase());
+		document.write('<br/><strong>Izdvojeno slovo: </strong>'+dan.charAt(0));
+		document.write('<br/><strong>Izdvojeno slovo: </strong>'+dan.charAt(15));
+		document.write('<br/><strong>Izdvajanje teksta: </strong>'+dan.substring(3,7));//gleda pozicije od 3 do 7
+		document.write('<br/><strong>Izdvajanje teksta 2: </strong>'+dan.substr(3,7));//gleda sve od 3 pozicije narednih 7
+		//document.write('<br/><strong>Umetanje teksta: </strong>'+dan.split(' '));//podeli u niz
+		document.write('<br/><strong>Zamena teksta : </strong>'+dan.replace('dan','noc'));//zameni samo prvo koje nadje
+		document.write('<br/><strong>Zamena teksta : </strong>'+dan.replace(/dan/g,'noc'));//zameni svuda
+		document.write('<br/><strong>Zamena teksta : </strong>'+dan.replace(/dan/gi,'noc'));//zameni svuda ne pravi razliku izmedju velikih i malih slova
+		document.write('<br/><strong>Pronalazenje teksta : </strong>'+dan.toUpperCase().indexOf('DAN',10));//pronadji tekst
+		document.write('<br/><strong>Zadnje mesto: </strong>'+dan.lastIndexOf('dan',32));//pronadji zadnju poziciju na kojoj se to nalazi
+		document.write('<br/><strong> Boja slova :</strong> '+dan.fontcolor("red"));
+		document.write('<br/><strong>Povecana slova:</strong>'+dan.big());
+		document.write('<br/><strong>Smanjena slova:</strong>'+dan.small());
+		document.write('<br/><strong>Velicina slova:</strong>'+dan.fontsize(36));
+		document.write('<br/><strong>Podigni text:</strong>'+dan.sup());
+		document.write('<br/><strong>Spusti slova:</strong>'+dan.sub());
+		document.write('<br/><strong>Smanjena slova:</strong>'+dan.small());
+		
+	</script>
+	</body>
+	
+</html>

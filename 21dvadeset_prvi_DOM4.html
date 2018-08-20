@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Dom elementi Dvadeset dva</title>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+		<script>
+		
+				//parvljenje neke liste uz pomoc dom
+			var niz=['white','red','yellow','green','blue','pink','orange','brown'];
+			
+			const lista=document.createElement('ul');
+			document.body.appendChild(lista);
+			
+			//stil koristim sa hover
+			var stil=document.createElement('style');
+			var head=document.head;
+			head.appendChild(stil);
+			var a=document.createElement(a);
+			stil.appendChild(a);
+			
+			for(var i=0; i<niz.length;i++){
+				const stavka=document.createElement('li');
+				lista.appendChild(stavka);
+				var link=document.createElement('a');
+				link.setAttribute('href','#');	//dodaj link		
+				stavka.appendChild(link);
+				link.innerText=niz[i];
+				
+			}
+			//prebaci braon pre plave
+			
+			const kraj=lista.lastElementChild;
+			var plava=document.getElementsByTagName('li')[4];
+			var ul=document.getElementsByTagName('ul')[0];
+			ul.insertBefore(kraj,plava);
+		
+			ul.setAttribute('type','square');
+			plava.style.color='blue';
+			plava.style.fontSize='24px';
+			plava.style.border='1px solid blue';
+			plava.style.width='100px';
+			var linkovi=document.getElementsByTagName(a);
+			linkovi.style='red';
+			
+			
+			/*Pravljenje linkova*/
+			
+			
+			
+		</script>
+	
+	</body>
+	
+</html>

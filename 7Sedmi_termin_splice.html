@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - 7 termin nizovi Slice i Splice</title> 
+		<script src="#" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<script>
+			var niz=["Milos", "Nevena","Goran","Ana","Jelena", "Milena"];
+			
+			niz.push('Nikola');//ubaci na kraj
+			
+			document.write('<br/>originalni niz:'+niz);
+			//niz.sort();
+			//niz.reverse();//okreni niz
+			
+			//niz.splice(3,0,'Aleksandar','Verica');//ubaci posle 3 pozicije 2 imena i prikazi sve
+			//document.write(niz);
+			
+			//var niz2=niz.splice(3,2,'MIlan','Zdravko');//umetni 2 imena umesto 2 postojeca posle 3 pozicije
+			//var niz3=niz.splice(3);//prikazi od 3 pa na dalje
+			//document.write('<br/>originalni Dodali Milana i Zdravka:'+niz);
+			//document.write('<br/>Splice 3,2:'+niz2);
+			//document.write('<br/>Splice 3:'+niz3);
+			
+			var niz4=niz.slice(3);
+			
+			document.write('<br/> Slice 3:'+niz4);//on samo kopira a ne sece kao Splice
+			
+			var niz5=niz.slice(3,6);
+			
+			document.write('<br/>Prokazi od 3 do 6:'+niz5);
+			
+			var prezime=['Milovanovic', 'Jovic', 'Koturovic','Lazic'];
+			
+			var ime_prezime= niz.concat(prezime);
+			
+			document.write('<br/>Ime i prezime spajanje nizova:'+ime_prezime);//spajanje 2 niza
+			
+			var imena=new Array();
+			imena.push(niz[0]+' ' + prezime.slice(0,1));
+			
+			document.write('<br/>Ime + prezime Spajanje clanova niza:'+imena);
+			
+			//ISCITAVANJE CLANOVA NIZA
+			for(var i=0; i<niz.length; i++){
+				document.write('<br/>'+niz[i]);
+			}
+			
+			//alert (niz.length);
+			
+			//PETLJA SAMO ZA NIZOVE
+			
+			for(var vrednost in niz){
+				//document.write('<br/>Petlja samo za niz' +niz[vrednost]);
+				document.write('<br/>Index: '+vrednost+' -> ' + niz[vrednost]);
+			}
+		
+						
+		</script>
+	</body>
+	
+</html>

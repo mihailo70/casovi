@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - vezba navigacija</title> 
+		<script src="#" type="text/javascript"></script>
+		<style>
+			ul{
+			width:100%;
+			padding:0 5%;
+			box-sizing:border-box;}
+			
+			ul li{
+				display:inline-block;
+				line-height:40px;
+				padding:0;
+				}
+			ul li a{
+				text-decoration:none; 
+				display:inline-block;
+				background:black;
+				color:white;
+				padding:0px 15px;
+				line-height:30px;	
+				font-size:0.8em;
+				}	
+				ul li a:hover{
+					color:white;
+					background:gray;
+					line-height:30px;
+				}
+		</style>
+	</head>
+	<body>
+		<script>
+			var navigacija=['home','skateboarding','snowboarding','mountain_biking','dirt_boarding','freestyle_BMX','rock_climbing','boulldering'];
+				document.write('<ul>');
+				for(var vrednost in navigacija){
+					document.write('<li><a  href="#" style="color:white; ";> ' + navigacija[vrednost]+'  </a></li>');
+					}
+				document.write('</ul>');
+		</script>
+	</body>
+	
+</html>

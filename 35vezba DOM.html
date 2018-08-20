@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dom</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	</style>
+	</head>
+		<body>
+			<p id="prvi" class="pasus">tekst</p>  <!--sve moze biti i klasa i id-->
+		<script>
+			for(var i=0;i<10;i++){
+			var div=document.createElement('div');
+			document.body.appendChild(div);
+			div.setAttribute('class','okvir');
+			
+			
+				var sadrzaj=document.createElement('h1');
+				div.appendChild(sadrzaj);
+				sadrzaj=sadrzaj.innerText='Naslov sadrzaja';
+			}
+			//stilizacija
+			var stil=document.createElement('style');
+			document.head.appendChild(stil);
+			stil.innerText=`.okvir{background:yellow;
+									width:600px;
+									border:1px red solid;
+									text-align:center;
+									margin: 20px;
+									text-transform:uppercase;
+									}`;
+			//div.style.textTransform='uppercase';
+			//div.style.margin='auto';
+			var div5=document.getElementsByTagName('div')[5];
+			div5.style.background='red';//ako hocemo samo jedan od divova da promenimo
+			div5.nextElementSibling.style.background='blue';
+			
+			var div1=document.body.lastElementChild;
+			div1.style.background='green';
+			
+		</script>
+		</body>
+	
+</html>

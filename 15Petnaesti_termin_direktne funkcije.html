@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<title>Petnaesti termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+		<script>
+
+		//pozivanje funkcije iz dryge funkcije
+/*		
+		function sum(x,y){
+				return x+y;
+			
+			}
+		
+		//var n=sum(3,4);
+		function novi_zbir(){
+			var novi_broj = sum(5,3);
+			return novi_broj+4;
+		}
+*/		
+	
+	//funkcija u funkciji 
+
+		function novi_zbir(x,y,z){
+			var sum=x+y+z;
+			
+			function novi_broj(d,e){
+				var sum_nova= sum+e;
+				return sum_nova;
+				}
+			return sum+novi_broj(4,9);	
+			}
+			
+		var b=novi_zbir(5,9,3);
+		document.write(b);
+		
+		//direktne funkcije ili samopozivajuce
+		(function j(){
+			document.write('<br/>Ovo je direktna funkcija' )
+		}());
+		
+		
+		(function j(a,b,c){
+			document.write('<br/>Vrednost za a je :' +a+'<br/>Vrednost za a je :'+b+'<br/>Vrednost za c je :'+c);
+		}(3,9,11));
+		
+		var n =(function j(a,b,c){
+			return a+b+c;
+		}(3,9,11));
+		
+		document.write('<br/>'+n);
+		
+		//kada ne znam koliko ima parametara funkcije
+		function brojevi(...params){
+			n=params+=params
+			document.write('<br/>'+n);
+		}
+		brojevi();
+		brojevi(2);
+		brojevi(5,2,8);
+		brojevi(16,13,2,7,99);
+		/*
+		function broj(...args){
+			document.write('<br/>Ovo je Args:       '+args);
+			var n=args+=args;
+			document.write('<br/> Ovo je Args+=args: '+n);
+		}
+		
+		broj();
+		broj(5,2,8);
+		broj(16,13,2,7,99);
+		*/
+		function broj(a,b,c){
+			var n=arguments;
+			return n;
+		}
+		var i = broj(7,4,8);
+		document.write('<br/> argumenti:'+i)
+		
+		</script>
+	</body>
+	
+</html>

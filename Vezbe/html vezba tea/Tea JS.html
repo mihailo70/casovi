@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javaco tea JS</title>
+		<link rel="stylesheet" href="css/stil_tea.css" media="all"/>
+		<meta charset="utf-8" />
+		<style>
+			body{
+				font-size:100%;
+				color:white;
+				font-family:Ariel, Verdana, sans-serif;
+				margin:0;
+				}
+			
+			date1{
+			font-size:0.8em;line-height:0.8em;color:rgb(74,199,56)
+			}
+			
+		</style>
+			
+	</head>
+	<body>
+		<script>
+		
+			document.write('<div id="main_frame" style="width:100%;height:auto;float:left;margin:0;margin-right:20px;background:rgb(170,250,5);">');
+
+				document.write('<header >');//header
+				document.write('<img  src="picture/javacotea.gif" alt="javacotea"/>');//picture in left corner  
+				document.write('<img style="float:right;height:auto; width:1%;" src="picture/curl.gif" alt="logo" />');//picture in right corner
+			
+				document.write('</header >');//end header
+			
+				//creating navigation many
+				var array1=['about us','about tea','brewing','drinking','products','contact us'];//Arrey for nav many
+				
+				document.write('<div id="content">');
+				
+				var content=document.getElementById('content');
+				
+				var list1=document.createElement('ul');
+				for(var i=0; i<array1.length;i++){
+					var item1=document.createElement('li');
+					list1.appendChild(item1);
+					var link=document.createElement('a');
+					link.setAttribute('href','#');	//added link		
+					
+					link.innerText=array1[i];
+					item1.appendChild(link);
+					list1.appendChild(item1);
+					
+					}
+					content.appendChild(list1);
+				
+				
+				//style for hover
+				var style1=document.createElement('style');
+				var head=document.head;
+				head.appendChild(style1);
+				var a=document.createElement(a);
+				style1.appendChild(a);
+				
+				
+				//added date() in right corner
+				var date1=document.createElement('date1');
+				list1.appendChild(date1);	
+				var d = new Date();
+				var day=d.getDate();
+				var year=d.getFullYear() ;
+				//array for mounth name 
+				const monthNames = ["January", "February", "March", "April", "May", "June",
+						"July", "August", "September", "October", "November", "December"];
+				date1.innerText= monthNames[d.getMonth()]+' '+day.toString()+','+year.toString();
+				//date1.innerText='April 18,2018';
+				date1.style.float='right';
+				date1.style.margin='0';
+				date1.style.padding='0.5% 10% 0% 10%';//font-size:0.8em;line-height:0.8em;color:rgb(74,199,56) defined in header style
+			document.write('</div>');//end of content
+			
+			//starting with left many
+				document.write('<div id="left_content" style="width:75%;float:left;height:auto;box-sizing:border-box;">');
+				
+					document.write('<div id="History" style="width:100%;height:auto;background:-webkit-linear-gradient(rgb(74,199,56),yellow,rgb(74,199,56))color:rgb(74,199,56);padding:0%;font-size:1em;box-sizing:border-box;margin-top:10px;line-height:50px;" >');
+						document.write('<h2 style="padding:0% 0.5%">about tea: <a href="#">history</a></h2>');
+					document.write('</div>');// end of History
+					
+				
+					document.write('<div id="text">');
+					document.write('<h3>The Legendary Origins of Tea</h3>');
+					
+						
+					</script>
+						<div id="original1"><!--text in left many-->
+							The history of tea extends so far into the past that its very origins are shrouded by legend. It is said that Emperor Shen Nung who ruled China in 
+							2700 BC, used to enjoy relaxing in his garden with a cup of hot water. It was during one of these respites that a tea leaf happened to float down from 
+							a nearby bush and land directly in the Emperor's cup.
+							The new drink quickly become the Emperor's favorite, and a taste for tea,<br/>
+							<img src="picture/teapot.jpg" alt="teapot"/>
+								quickly spread throughout the aristocracy, and it wasn't long before tea was the favored drink throughout all of China.<br/>
+									It was in the 16th century that Portuguese missionars were seduced by tea's flavor and the intricate customs which surrounded 
+									it. A demand for the drink quickly arose, and the Dutch East India Company began importing it into Europe.
+									It's most likely that it was Japanese green teas which were first to arrive in the west, owing Japan's liberal trade policies with Dutch.
+										Initilly, tea was chiefly recommanded to Europeans for it's purported medicinal qualities; it was claimed by the Dutch
+										that tea was a cure for nearly every disease imaginable.
+										Due the expense of bringing tea halfway across the globe, it was initially consumed primarlly by aristocrats and the rich. Over 
+										time the cost of tea fel enough for people from all walks of life to be able to enjoy it. By 1717 Thomas Twining's English coffe 
+										house become a tea shop; and unlike the ubiqutous London coffee house on the era, the dors of Twining's were open to both man and women.
+										Meeting	friends over tea became a staple British life, and afternoon tea become a last tradition that still continues today.
+						
+						</div>
+				<script>	
+				document.write('</div>');//end of text
+				
+				document.write('</div>'); //end of left_content
+				
+				//start right many
+				document.write('<div id="right_content" style="padding:0.5% ;width:25%;float:left;height:auto;box-sizing:border-box;">');
+					document.write('<div class="tea1">');
+						document.write('<div id="search">');
+						document.write('<input type="search" name="search" />');
+						document.write('</div>');//end of search
+						document.write('<button type="button" name="button_search" onclick="Search()" style="background:-webkit-linear-gradient(top,white,gray );width:25%;height:25px;float:left;box-sizing:border-box;text-align:center;line-height:25px;margin:12.5px 0px;">Search </button>');	
+						document.write(' </div>');
+						
+						document.write('<div class="tea2" >');
+						document.write('<p>tea of the day</p>');
+						document.write('</div>');//end tea2
+						
+						document.write('<div id="blog" >');
+							document.write('<div id="blog1" >');
+								document.write('<p>I abrador tea</p>');
+								document.write('</div>');
+							document.write('<div id="blog2" name="blog2">');
+								document.write('<p>Lorem ipsum, dolor sit ame!,<br/>consectetuer adipiscing elit, seed diam nonummy nibh eusmod tincidunt ul loroot dolore magna aliquam.</p></div>');
+								document.write('<img src="picture/teaoftheday.jpg" alt="teaoftheday"/>');
+								
+							document.write('</div>');//end blog
+							document.write('<div class="tea" name ="tea">');
+								document.write('<p>Post archive</p>');
+							document.write('</div>');
+							//Calendar
+							
+							var reset=(day)=>{day1=1;return day1;}//arrow function for reset Calendar ES6
+							
+							document.write('<div id="kalendar" style="width:100%;height:auto;background:black;margin-top:0;box-sizing:border-box;padding:10px 20px;margin-right:100px;text-align:center;font-size:0.8em;">');
+								var d = new Date();
+								var day=d.getDate();
+								var year=d.getFullYear() ;
+								var month=d.getMonth();
+								const monthNames2 = ["January", "February", "March", "April", "May", "June",
+								"July", "August", "September", "October", "November", "December","January", "February", "March", "April", "May", "June",
+								"July", "August", "September", "October", "November", "December"];
+								const monthDays=[31,28,31,30,31,30,31,31,30,31,30,31];
+								var day1 =1;
+								var week=['Sun','Mon','Tue','Wen','Thu','Fri','Sat','Sun','Mon','Tue','Wen','Thu','Fri','Sat'];
+								
+								
+								//header CALENDAR
+								document.write('<table border="1" width="20%"><tr align="center">');//table
+								
+								document.write('<td colspan="4"><strong><select name="Month" id="dropMonth">');//month combo in header
+								var j=month;
+								for (i=j;i<12+month;i++){
+									
+									document.write('<option value="'+i+'">'+monthNames2[i]+' </option>');
+								}
+								document.write('</td>');//end month in header of table
+								
+								document.write('<td colspan="3"><strong><select id="dropYear" name="Year" >');//Year combo in header
+								for (i=0;i<12;i++){
+									document.write('<option value="'+i+'">'+Number(year-i)+' </option>');
+								}
+								document.write('</td>');//end year in header of table
+								//Week
+								document.write('<tr>');
+								for (i=0;i<7;i++){
+							
+									document.write('<td><strong>'+week[i]+'</strong></td>');
+								}
+								//Days
+								var newStartMounth= '01'+'/'+document.getElementById(dropMonth)+'/'+document.getElementById(dropYear);
+								//alert(document.getElementById(dropMonth));
+								var monthNum=monthNames2.indexOf('August');//check days has this month
+								document.write('</tr><tr>');
+								var newm=0;
+								for (j=0;j<5;j++){
+									for (i=0;i<7;i++){
+									//check how many days has this month
+									if (day1>monthDays[monthNum]){reset(day1);newm=1;};
+										 
+										if(day1==day&&newm==0){
+											
+											document.write('<td style="background:blue">'+day1+'</td>');
+										}
+										else{
+											if (newm==1){document.write('<td style="background:grey">'+day1+'</td>');
+											}else{
+												document.write('<td>'+day1+'</td>');
+											}
+											
+											}
+																				
+										day1++;
+										
+									}
+									document.write('</tr>');
+									}
+								document.write('</table>');
+							
+							document.write('</div>');//end kalendar
+
+				document.write('</div>');//end right_content
+		document.write('</div>');//end main_frame
+		</script>
+				<footer>
+			<p>Site design by <a href="#">M.B.</a>
+		</footer>
+	</body>
+</html>

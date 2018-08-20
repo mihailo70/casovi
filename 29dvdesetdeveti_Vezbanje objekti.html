@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Vezbanje objekti Dvadeset deveti</title>
+		
+	</head>
+	<body>
+	<script>
+		//klasicni objekat
+		var voce={
+			naziv:'Maline',
+			sezona:'leto',
+			cena:150,
+			boja:'Roze',
+			primena:function(){
+				return 'Voce: '+this.naziv+'<br/> Berba: '+this.sezona+'<br/>Cena: '+this.cena;
+				
+			}
+		}
+		document.write(voce.primena());
+		
+		//dodati nizovi i kako se pozivaju
+		var povrce={
+			naziv:'Krompir',
+			tip:['beli','crni','crveni','baby'],
+			
+			//podobjekat
+			sorte:{
+				sorta1:'Madaliene',
+				sorta2:'Kuroda',
+				sorta3:'Bellarosa',
+				sorta4:'Agria',
+				stampa:function(){
+					return 'Sorte: '+this.sorta1+'<br/>'+this.sorta2+'<br/>'+this.sorta3+'<br/>'+this.sorta4+'.';
+					}
+				},
+			
+			cena:[70,90,40,200],
+			primena: function(){
+				return '<br/>Upotrebljava se '+this.tip[0]+' za krompir pire, '+this.tip[1]+' za pecenje, '+this.tip[2]+ ' za salate a ' +this.tip[3]+' za przenje';
+			}
+		
+		}
+		document.write(povrce.primena());
+		document.write('<ul>');
+		for(i=0; i<povrce.tip.length;i++){
+			document.write('<li>'+povrce.tip[i]+'</li>');
+		}
+		document.write('</ul>');
+		document.write('<p>'+povrce.sorte.sorta2+'</p>');//pozivanje podobjekta 
+		document.write('<p>'+povrce.sorte.stampa()+'</p>');
+		
+		povrce.__proto__=voce;//na ovaj nacin objekat povrce nasledjuje objekat voce 2 donje crte proto 2 donje crte
+		
+		document.write(povrce.boja);
+		//proveravam da li postoji neki properti pomocu hasOwnProperty 
+		if(povrce.hasOwnProperty('cena')){
+			document.write('<br/>ima')
+		}
+		//iscitavam kljuceve - svojstva
+		for (var vrednost of Object.keys(voce)){
+			console.log(vrednost);
+		}
+		
+		//iscitavam kljuceve - svojstva
+		for (var [kljuc,vrednost] of Object.entries(voce)){
+			console.log(kljuc+'-'+vrednost);
+		}
+		
+	</script>
+	
+	</body>
+	
+</html>

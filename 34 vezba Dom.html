@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dom</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	</style>
+	</head>
+		<body>
+			<h1>Naslov</h1>
+			<ul id="lista">
+				<li><a href="#">Beograd</a></li>
+				<li><a href="#">Nis</a></li>
+				<li><a href="#">Novi Sad</a></li>
+			</ul>
+			 <p class="prvi">Nas pasus</p>
+			<script>
+				var h1=document.getElementsByTagName('h1')[0];
+				h1=h1.innerText='Neki novi naslov';
+				
+				//alert(h1);
+				
+				//var li=document.getElementsByTagName('li');
+				
+				//alert(li.length);
+				
+				//var p=document.getElementsByClassName('prvi')[0];
+				
+				//alert(p.innerText);
+				//var li=document.getElementsByTagName('li')[0];
+				//alert(li.innerText);
+				
+				//var sledeci=li.nextElementSibling.nextElementSibling;//dodji do treceg
+				//alert(sledeci.innerText);
+				
+				var novi=document.createElement('li');
+				var link=document.createElement('a');
+				link.innerText='Jagodina';
+				link.setAttribute('href','#');
+				novi.appendChild(link);
+				var ul=document.getElementById('lista');
+				ul.appendChild(novi);
+				
+				
+				for (var i=0; i<document.getElementsByTagName('li').length;i++){
+					var li=document.getElementsByTagName('li')[i];
+					document.write(li.innerText);
+				}
+				
+				
+			</script>
+		</body>
+	
+</html>

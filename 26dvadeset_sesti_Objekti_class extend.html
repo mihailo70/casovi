@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Objekti IV deo (Klase) Dvadeset sesti</title>
+		
+	</head>
+	<body>
+	<script>
+		class Turtle{
+				constructor(name,oruzije,food){
+					this.name=name;
+					this.oruzije=oruzije;
+					this.food=food;
+				}
+				hrana(){
+					return `<h4>Kornjace vole da jedu ${this.food}</h4>`;
+				}
+				borba(){
+				return `<h4>Ovaj heroj se zove ${this.name} i koristi ${this.oruzije}</h4>`;
+				}
+				static prijatelji(name){
+				return `<strong>Prijateljica kornjaca se zove ${name}</strong> `;
+					} //ako je staticki moze da se pozove direktno iz klase
+			}
+			
+			//pravljenje podklase uz pomoc extends nasledjujemo klasu od pre
+			class Ucitelj extends Turtle{
+				constructor(name, oruzije, food, skloniste){
+					super(name, oruzije, food);//ovim nasledjujemo prethodne klase
+					this.skloniste=skloniste;
+					
+				}
+				
+				opis(){
+					return `<h4>On koristi ${this.skloniste} kao svoju kucu!</h4>`;
+				}
+			}
+			
+			class neprijatelj extends Ucitelj{
+				
+				constructor(name, oruzije, food, skloniste,pomagac1,pomagac2){
+					super(name, oruzije, food,skloniste);
+					this.pomagac1=pomagac1;
+					this.pomagac2=pomagac2;
+				}
+				tim(){
+					return `Njemu pomazu divlja svinja pod imenom ${this.pomagac1} i nosorog ${this.pomagac2}`
+				}
+			}
+			
+			//Turtle.prototype.hrana=function(){return 'oops'};//sve instance promeni u oops svuda hranu
+			
+			cons Sekac = new neprijatelj('Sekac','Nozevi','povrce','leteca tvrdjava','Roksted','Bibo');
+			document.write(Sekac.tim());
+			const Splinter=new Ucitelj('Splinter','Stap','Sve','Kanalizacija')
+			document.write(Splinter.opis());
+			document.write(Splinter.borba());
+			document.write(Splinter.hrana());
+			const Leo=new Turtle('Leonardo','Katana','Pizza');
+			document.write(Leo.borba());
+			document.write(Leo.hrana());
+			
+			
+			
+			
+	
+	</script>
+	
+	</body>
+	
+</html>

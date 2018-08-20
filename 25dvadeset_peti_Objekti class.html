@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Objekti III deo (Klase) Dvadeset peti</title>
+		
+	</head>
+	<body>
+		
+		<script>//ES6 klase su novina kad bi koristili objekat umesto njih za svaku instancu bi morali praviti novi objekat
+			//klasa je samo sablon i nista se ne desi kad se sama pozove
+			class Turtle{
+				constructor(name,oruzije,food){
+					this.name=name;
+					this.oruzije=oruzije;
+					this.food=food;
+				}
+				hrana(){
+					return `<h4>Kornjace vole da jedu ${this.food}</h4>`;
+				}
+				borba(){
+				return `<h4>Ova kornjaca se zove ${this.name} i koristi ${this.oruzije}</h4>`;
+				}
+				static prijatelji(name){
+				return `<strong>Prijateljica kornjaca se zove ${name}</strong> `;
+					} //ako je staticki moze da se pozove direktno iz klase
+			}
+			
+			const don=new Turtle('Donatelo','Stap','Pizza');
+			document.write(don.borba());
+			const Mike=new Turtle('Mikelandjelo','Nuncake');
+			document.write(Mike.borba());
+			const Leo=new Turtle('Leonardo','Katana');
+			document.write(Leo.borba());
+			//document.write(don.borba());//ovo ne radi
+			document.write(Turtle.prijatelji('Ejpril O Neil'));
+			
+			//prototype sluzi da se nasledi svojstvo
+			Turtle.prototype.hrana=function(){
+				return 'oops'
+			};
+			document.write(don.hrana());
+			
+			
+		</script>
+	
+	</body>
+	
+</html>

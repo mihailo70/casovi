@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<title>Nizovi</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+		#okvir1{
+			width:100%;
+			height:100%;
+			float:left;
+		}
+		#content{
+			float:left;
+			margin:10px;
+			background:yellow;
+			padding:10px;
+			size:16px;
+			
+		}
+		#okvir2{
+			width:100%;
+			height:100%;
+			float:left;
+		}
+		#content2{
+			float:left;
+			margin:10px;
+			background:orange;
+			padding:10px;
+			size:16px;
+			
+		}
+		#okvir3{
+			width:100%;
+			height:100%;
+			float:left;
+		}
+		#content3{
+			float:left;
+			margin:10px;
+			background:red;
+			padding:10px;
+			size:16px;
+			
+		}
+		#okvir4{
+			width:50%;
+			height:30px;
+			float:left;
+			background:green;
+			color:white;
+			size:16px;
+		}
+	</style>
+	</head>
+		<body>
+		<script>
+			var niz=[];
+			var niz2=[];
+			var niz3=[];
+			
+			for (i=0;i<10;i++){
+				niz.push(Math.round(Math.random()*20));
+			}
+			for (i=0;i<10;i++){
+				var n = prompt('Unesite broj');
+				 n= parseInt(n);
+				niz2.push(n);
+			}
+			//document.write(`<br/>Slucajni brojevi su : ${niz}`);
+			//document.write(`<br/>Vasi brojevi su : ${niz2}`);
+			
+			for (i=0;i<niz.length;i++){
+				for (j=0;j<niz2.length;j++){
+					if(niz[i]==niz2[j]){
+						niz3.push(niz[i]);
+					}
+				}
+			}
+			//document.write(`<br/>Poklapanja su : ${niz3}`);
+			document.write(`<h1>Slucajni brojevi</h1>`);
+			document.write(`<div id ="okvir1" >`);
+			for (i=0;i<niz.length;i++){
+				document.write(`<div id ="content">`);
+				document.write(niz[i]);
+				document.write('</div>');
+			}
+			document.write('</div>');//end of okvir1
+
+		document.write(`<h1>Vasi brojevi</h1>`);
+			document.write(`<div id ="okvir2" >`);
+			for (i=0;i<niz2.length;i++){
+				document.write(`<div id ="content2">`);
+				document.write(niz2[i]);
+				document.write('</div>');
+			}
+			document.write('</div>');//end of okvir1
+
+			document.write(`<h1>Brojevi koji se poklapaju</h1>`);
+			document.write(`<div id ="okvir3" >`);
+			for (i=0;i<niz3.length;i++){
+				document.write(`<div id ="content3">`);
+				document.write(niz3[i]);
+				document.write('</div>');
+			}
+			document.write('</div>');//end of okvir1				
+			
+			document.write(`<div id ="okvir4" >`);
+			document.write('Broj poklapanja je: '+niz3.length);
+			document.write('</div>');
+			</script>
+		</body>
+	
+</html>

@@ -1,0 +1,25 @@
+Body treba da ima background sliku koja je fiksirana, ne skrola se sa 
+scrollom strane.
+ 
+Header:
+1. Logo - holder za sliku i oko njega link
+2. Top menu - klasicna lista (ul > li), stilizovana sa hover stanjem
+3. Main menu - klasicna lista (ul > li), stilizovana sa hover stanjem
+ 
+Content:
+Floatovani boxovi na levo, kako bi se slagali jedan za drugim, sadrzaj 
+boxova je jednostavan, slika gore, nad naslov, glavni naslov, text i 
+link ispod. Sve je stilizovano klasicnim css-om sa upotrebom javascripta.
+Ono na sta treba obratiti paznju jesu borderi oko boxo-va, zato sto ne 
+postoje dupli borderi vec samo jedan koji deli dva boxa (gore/dole i 
+levo/desno).
+Dodatni zahtev je hover stanje celog box-a. Ti ovo mozes uraditi preko 
+css3 animacija (transitions), tako sto ces pomerati top i left pozicije 
+u minus ili preko js-a, kako god ti je lakse.
+ 
+Footer:
+Samo text, centralno pozicioniran.
+ 
+Responsiveness:
+Kada sirina browsera dodje ispod sirine contenta, boxovi treba da budu 
+jedan po redu, top menu da se sakrije, i main menu da bude vertikalni.

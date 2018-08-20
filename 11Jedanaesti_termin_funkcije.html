@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<title>Jedanaesti termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+	<script>
+		//alert('Ovo je nesto');//iskacuci prozor
+		
+		/*
+		var pitanje = confirm('da li ste punoletni?');//iskacuci prozor sa potvrdom True or Folce
+			if (pitanje===true){
+				document.write('Dobro dosli na sajt za kladjenje');
+			} else{
+				document.write('Zao nam je niste punoletni');
+			}
+		*/
+		/*
+		var ime = prompt('Unesite vase ime');
+		if (ime=='Dragan'){
+			document.write('Dobro dosli '+ime);
+			
+		} else{
+			document.write('Vi niste Dragan');
+		}*/
+		/*
+		var c=21;
+		var d = 35;
+		var a = 10;
+		var b=11;
+		
+		function zbir(a,b){
+			
+			var rez = a+b;
+			//document.write('<br/>'+rez);
+		
+			return rez;
+		}
+		//zbir(4,10); // pozivam funkciju
+		//zbir(c,d);
+		var ukupno=zbir(c,d);
+		document.write('<br/>'+ukupno);
+		*/
+		/*
+		var a = prompt('Unesi prvi broj');
+			a=parseInt(a);
+		
+		var b=prompt('Unesi drugi broj');//u ovom slucaju vidi kao tekst i dodaje jedno do drugog
+			b=parseInt(b);//pretvori u numerik 
+		
+		function zbir(a,b){
+			
+			var rez = a+b;
+			
+			return rez;
+		}
+		var ukupno=zbir(a,b);
+		document.write('<br/>'+ukupno);
+		*/
+		
+		
+		
+		document.write('<table border="1" width="20%"><tr><td/><strong>Broj</strong></td><td><Strong>Broj 2 </strong></td><td><strong>Ukupno</strong></td>');
+		
+		for (var i=0; i<5; i++){
+			for (var j=0;j<1;j++){
+				var a = prompt('Unesi prvi broj');
+				a=parseInt(a);
+				document.write('<tr><td>'+a+'</td>');
+				var b=prompt('Unesi drugi broj');
+				b=parseInt(b);
+				document.write('<td>'+b+'</td>');
+				
+				var ukupno =zbir(a,b);
+				document.write('<td>'+ukupno+'</td>');
+				
+			}
+			document.write('</tr>');
+		}
+		
+		document.write('</table>');
+		
+		function zbir(a,b){
+			var rez=a+b;
+			return rez;
+		}
+		
+		
+	</script>
+	</body>
+	
+</html>

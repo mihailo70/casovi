@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<title>deseti nastavak - string</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+	<script>
+		var ime1 = 'Goran';
+		var ime2 = 'Aleksandra';
+		var ime3 = 'Milan';
+		
+		if (ime1.length > ime2.length){
+			if(ime1.length>ime3.length){
+				document.write('Ime1 je najduze:'+ime1+ime1.length);
+			}
+		}
+		
+		if (ime2.length > ime1.length){
+			if(ime2.length>ime3.length){
+				document.write('Ime2 je najduze:'+ime2+ime2.length);
+			}
+		}
+		if (ime3.length > ime1.length){
+			if(ime3.length>ime2.length){
+				document.write('Ime3 je najduze:'+ime3+ime3.length);
+			}
+		}
+		
+		
+		var imeniz =new Array (ime1.length+'1',ime2.length+'2',ime3.length+'3');
+		var sort_niz=imeniz.sort();
+		
+		document.write('<br>'+imeniz);
+	
+		document.write('<br>'+sort_niz[0]);
+	
+		var broj = sort_niz[0];
+		
+		var novo1= broj.substr(broj.length-1,1);
+		var novo='ime'+novo1;
+		document.write('<br>Nasa varijabla je '+novo);
+		if (novo[]== 'ime2'){
+		document.write('<br>Nasa varijabla je '+ime2);
+		}
+		
+	</script>
+	</body>
+	
+</html>

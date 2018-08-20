@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>Trinaesti termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+	<script>
+	
+	var niz=['Beograd','Amsterdam','London','Budimpesta','Bec','Pariz','Verona','Lucern','Berlin','Bukurest','Minhen'];
+	
+	var boje=['blue','yellow','red','green','brown','pink','orange'];
+	
+	function boja(boje){
+		for(var f=0; f<boje.length; f++){
+			return boje[f];
+			//document.write(boje);
+		} 
+	}
+	
+	
+	
+	function tabela(a,b,c){
+			
+			document.write('<table border="1" width="30%">');
+			for(var i=1;i<=a; i++){
+			
+			
+			
+			//boja=(boja=='blue')?'green':'blue';//ternani operater
+				document.write('<tr>');
+				for(var j=0;j<niz.length;j++){
+				function boja(boje){
+				
+					return boje[j];
+					//document.write(boje[i]);
+					 
+				}
+				
+					document.write('<td bgcolor="'+boja(boje)+'">');
+					document.write(niz[j]);
+					document.write('</td>');
+				}
+			
+				document.write('</tr>');
+			}
+			document.write('</table><br/>');
+		}
+		tabela(5,16);
+		
+		function broj1(){
+			return 5;
+		}
+		function broj2(){
+			return 13;
+		}
+		
+		function zbir(broj1,broj2){
+			return broj1()+broj2();
+		}
+		
+		var rezultat=zbir(broj1, broj2);
+		alert(rezultat);
+		
+	</script>
+	</body>
+	
+</html>

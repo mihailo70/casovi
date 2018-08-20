@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<title>Sedamnaesti termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+		<script>
+			var n=10;
+			let f=8;//ES6 promenljiva koja vazi samo u okviru bloka
+			
+			if(f>5){
+				
+				let f=3;
+				document.write(`<br/>Vrednost za f u bloku if je :${f}`);
+			}
+			
+			if(true){
+				let f=6;
+				document.write(`<br/>Vrednost za f u drugom bloku if je :${f}`);
+			}
+			function broj(){
+				 let n=5;
+				 if(true){
+					let n=3;
+				 }
+				return n;
+			
+			}
+		
+			var broj = broj();
+			document.write(`<br/>Unutar funkcije broj je: ${broj}`);
+			document.write(`<br/>Globalna prom je ${n}`);
+			document.write(`<br/>Let f ima vrednost ${f}`);
+			
+			let a=9;
+			{
+				let a=4;
+				document.write(`<br/>Let a ima vrednost u prvom bloku ${a}`);
+				{
+					let a=2;
+					document.write(`<br/>Let a ima vrednost u drugom bloku ${a}`);
+				}
+				
+			}
+			document.write(`<br/>Let a ima vrednost van bloka ${a}`);
+			
+			
+			const pi=3.14;//ES6 konstanta koja se ne menja
+			for(let i=0; i<3; i++){
+				document.write(`<br/>Let a ima vrednost u ifu ${i}`);
+				for(let i=1; i<2; i++){
+					const pi = 4;
+					document.write(`<br/>Let a ima vrednost u drugom ifu ${i} a pi je ${pi}`);
+				
+				}
+			}
+			document.write(`<br/>Const pi ima vrednost van bloka ${pi}`);
+			
+			//Rekurzivne frunkcije Pozivam funkciju iz same sebe
+			var broj=0;
+			brojac()
+			function brojac(){
+				broj++;
+				if(confirm(`<br/>Da li zelite da povecate funkciju za 1? Trenutni broj je ${broj}`)){
+					brojac();
+				}
+				document.write(	`<br/>funkcija se zavrsila sa brojem : ${broj}`);
+			
+			}
+			
+			
+			//DATUMI----------------------------------------------
+			var datum=new Date(2014,4,3,2,3,35);
+			document.write(`<br/>Danasnji datum je ${datum}`);
+			
+			var d = new Date(2014,4,3,2,3,35);
+
+			var datestring = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " +
+				d.getHours() + ":" + d.getMinutes();
+			document.write(`<br/>Danasnji datum je ${datestring}`);
+			//meseci  od 0 do 11
+			//dane u nedelji Nedelja = 0
+			
+			var=['Sunday', 'Monday', 'Tuesday','Wadnsday','];
+			
+			
+			
+			
+			
+		</script>
+	</body>
+	
+</html>

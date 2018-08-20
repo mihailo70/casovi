@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>More </title>
+		
+	</head>
+	<body>
+	<script>
+		/*
+			1.	Kreirati klasu  fudbaler  koja ima sledeca svojstva: 
+			ime fudbalera, pozicija na kojoj igra, tim 
+			Takodje, kreirati metodu koja pokazuje imena svojstava i vrednosti za te podatke u tabeli.
+		*/
+		class Fudbaler{
+				constructor(name,pozicija,tim){
+					this.name=name;
+					this.pozicija=pozicija;
+					this.tim=tim;
+					}
+				ime(){
+				return this.name;
+				}
+				pozz(){
+				return this.pozicija;
+					}
+				timm(){
+					return this.tim;
+					}
+				
+				}
+		
+				
+					
+				class Tim2 extends Fudbaler {
+					constructor(name,pozicija,tim,selektor, trofeji, drzava){
+						super(name,pozicija,tim);
+						this.selektor=selektor;
+						this.trofeji=trofeji;
+						this.drzava=drzava;
+						}
+						opis(){
+						return '<br/><h4>Poznati tim '+this.tim+' predvodio je selector '+this.selektor+
+						' i dao je '+this.trofeji+' golova za reprezentaciju '+this.drzava+' .<br/> Najpoznatiji njihov igrac bio je '+this.name+' igrajuci na poziciji '+this.pozicija+'</h4>'
+						}
+					}
+				
+				
+				const Pele=new Fudbaler('Pele','Centrafor','Santos FC');
+				document.write('Najpoznatiji igrac svih vremena '+Pele.name+' je igrao na poziciji '+Pele.pozicija+' u timu '+Pele.tim);				
+				const Maradona=new Fudbaler('Maradona','Vezni Centar','Boka Juniors');
+				const Bekenbauer=new Fudbaler('Bekenbauer','Odbrana','Bajern Minhen');				
+				
+				
+				
+			var igrac=[Pele.name,Maradona.name, Bekenbauer.name];
+			var poz=[Pele.pozicija,Maradona.pozicija, Bekenbauer.pozicija];
+			var tim1=[Pele.tim,Maradona.tim, Bekenbauer.tim];
+			
+			
+			//prvi nacin kreiranja tabele 
+		
+			document.write('<table border="1" width="20%" ><tr align="center"><td colspan="3"><strong>Tabela najpoznatijih fudbalera svih vremena</strong></td>');
+			document.write('<tr><td><strong>Igrac</strong></td><td><Strong>Pozicija </strong></td><td><strong>Tim</strong></td>');
+		
+			for (var i=0; i<3; i++){
+				for (var j=0;j<1;j++){
+					document.write('<tr><td>'+igrac[i]+'</td>');
+					document.write('<td>'+poz[i]+'</td>');
+					document.write('<td>'+tim1[i]+'</td>');				
+				}
+				document.write('</tr>');
+			}
+		
+			document.write('</table>');
+			
+			
+	
+		
+		//Drugi nacin sa dodavanjem atributa - treba mi pomoc oko ovoga
+		var zatabelu=[[Pele.name,Maradona.name, Bekenbauer.name],[Pele.pozicija,Maradona.pozicija, Bekenbauer.pozicija],[Pele.tim,Maradona.tim, Bekenbauer.tim]];
+		var tabela=document.createElement('table');
+		tabela.setAttribute('border',1);
+		tabela.setAttribute('width','50%');
+		tabela.setAttribute('align','center');
+		document.body.appendChild(tabela);
+		for(u=0;u<3;u++){
+			var red=document.createElement('tr');
+			tabela.appendChild(red);
+			for(i=0;i<3;i++){
+				var polje=document.createElement('td');
+					red.appendChild(polje);
+					polje.innerText= zatabelu[i][u];
+					}
+				}
+			
+			/*
+				2.	Napraviti klasu tim koja nasledjuje klasu fudbaler, 
+				koristi podatke o fudbaleru  i prikazuje ime selektora i broj trofeja koje je osvojio tim,
+				kao i zemlju porekla
+			*/
+			const timPele=new Tim2('Pele','Centrafor','Santos FC','Jair Ventura','71','Brazil');
+				document.write(timPele.opis());
+			
+			const timMaradona=new Tim2('Maradona','Vezni Centar','Boca Juniors','Luis Cesar Menotti','47','Argentina');
+				document.write(timMaradona.opis());	
+			const timBeken=new Tim2('Bekenbauer','Odbrana','Bajern Minhen','Joahim Lev','114','Zapadna Nemacka');
+				document.write(timBeken.opis());
+				
+			/*
+				3.	Napraviti funkciju koja unosi u niz sve slucajne brojeve od 0 do 100 koje joj prosledimo, 
+				sem brojeva koji su izmedju 30 i 50.
+			*/			
+			//niz od 0 - 100 ali iskljuci od 30 - 50	
+			
+			var niz=[];
+			var niz2=[];
+			
+			// ovo sam pogresno shvatio zadatak
+			/*
+			for(var i=0; i<100; i++){
+				a=Math.round(Math.random()*100)
+				if(a<30 || (a>50&&a<100){
+					niz.push(a);
+				}
+				else {
+					i=i-1
+				
+				}
+			}
+			
+			*/
+			//ovo je resenje
+			function broj(a){
+				if(a<30 || (a>50 && a<100)){
+					niz.push(a);
+				}else{
+					niz2.push(a);
+				}
+				
+			}
+			for(var i=0; i<5; i++){
+				var a=prompt('Unesite vase broj koji nije izmedju 30 i 50');
+				a=parseInt(a);
+				broj(a);//pozivam funkciju kojom kontrolisem da li je moj broj u zadatim vrednostima
+			}
+		
+			document.write('<br/>Nas niz je :'+niz);
+			document.write('<br/>Niz pogresnih brojeva je:'+niz2);
+			
+			//Vezba stringovi 
+			/*
+				4.	Napraviti string koji sadrzi rec Abrakadabra, pronaci koliko ima slova a,
+				i na kom mestu je slovo k.
+			*/
+			//Trazim A na kojim je pozicijama
+			niz1=[];
+			var rec='Abrakadabra'
+			for(var i=0;i<rec.length;i++){
+				var m=0;
+				m=rec.toUpperCase().indexOf('A',i);
+				if (m>=i){
+					niz1.push(m);
+					i=m;
+					}
+			//document.write('<br/><strong>'+m);
+			}
+			document.write('<br/><br/><strong>Nasa rec je :'+rec+'</strong>');
+			document.write('<br/><strong>Slovo A se nalazi na pozicijama : </strong>'+niz1);
+			document.write('<br/><strong>Slovo A se ponavlja : </strong>'+niz1.length+' puta');
+			
+			//Trazim K
+			document.write('<br/><strong>Slovo K se nalazi na poziciji : </strong>'+rec.indexOf('k',0));
+			
+			//5.	Iz niza slova=[B,H,M,K,Y,L,Q,A,I,O];
+			var slova=['B','H','M','K','Y','L','Q','A','I','O'];
+			
+			document.write('<br/><br/><strong>Nas niz je : '+slova+'</strong>');
+			//a.	Izbaciti slovo M a ubaciti slovo T
+			
+			
+			for(var i=0;i<slova.length;i++){
+				
+				if (slova[i]=='M'){
+					
+					slova[i]='T';
+				}
+			}
+			document.write('<br/><strong>Nas niz bez M : '+slova+'</strong>');
+			
+			//b.	Prikazati na ekranu zadnji element niza
+			document.write('<br/><strong>Zadnji element niza je : '+slova[slova.length-1]+'</strong>');
+			
+			//c.	Ubaciti na prvo mesto slov E
+			slova.unshift('E');
+			document.write('<br/><strong>Na prvu poziciju niza sam dodao E : '+slova+'</strong>');
+			
+			//d.	Sve samoglasnike u nizu posle zadatka C, kopirati u poseban niz samoglasnici,
+			var samogl=[];
+			var sugl=[];
+			for(i=0;i<slova.length;i++){
+				if (slova[i] =='A'||slova[i]=='E'||slova[i]=='I'||slova[i]=='O'||slova[i]=='U'){
+				samogl.push(slova[i]);
+								
+				}else{
+				sugl.push(slova[i]);
+				
+				}
+			}
+			document.write('<br/>Samoglasnici u nizu:'+samogl);
+			
+			//e.	Sve suglasnike prikazati na ekranu crvenom bojom kao listu 
+			
+			document.write('<br/>Suglasnici u nizu:'+sugl);
+					
+			const lista=document.createElement('ul');
+			document.body.appendChild(lista);
+			
+			//stil koristim sa hover
+			var stil=document.createElement('style');
+			var head=document.head;
+			head.appendChild(stil);
+			var a=document.createElement(a);
+			stil.appendChild(a);
+			stil.innerText='a{color:red; text-decoration:none;font-weight:bold;}a:hover{color:blue;}';
+			for(var i=0; i<sugl.length;i++){
+				const stavka=document.createElement('li');
+				lista.appendChild(stavka);
+				var link=document.createElement('a');
+				link.setAttribute('href','#');	//dodaj link		
+				stavka.appendChild(link);
+				link.innerText=sugl[i];
+				
+			}
+			
+			ul.setAttribute('type','square');
+			plava.style.color='red';
+			plava.style.fontSize='24px';
+			plava.style.border='1px solid red';
+			plava.style.width='100px';
+			var linkovi=document.getElementsByTagName(a);
+			linkovi.style.color='red';
+			
+			
+			
+	</script>
+	
+	</body>
+	
+</html>

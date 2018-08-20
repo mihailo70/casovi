@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>vezba nizovi</title>
+		<link rel="stylesheet" href="css/qode.css" media="all"/>
+		<meta charset="utf-8" />
+			
+	</head>
+	<body>
+		<script>
+			var niz=[45,23,54,2,98,10,34,6,21];
+			niz.sort(function (a,b,){
+			return (a-b);
+			});
+			
+			niz.sort((a,b)=>(a-b));
+			
+			niz.push(Math.round(Math.random()*50));
+			document.write(niz);
+			document.write('<ul>');
+			for(i=0;i<niz.length;i++){
+				document.write('<li><a href="#"> '+niz[i]+'</a></li>');
+					}
+			document.write('</ul>');
+			for(element in niz){
+				document.write('<br/>Pozicija niza:'+element+' Clan niza:'+niz[element]);
+			}
+			
+			for(element in niz){
+				if(niz[element]<=25){
+					document.write('<br/>Broj: '+niz[element]+' je manji od 25');
+				}
+			}
+			
+			var text=niz.join('-');
+			document.write('<br/>Pretvorili smo niz u string '+text);
+			for(element in niz){
+			if (niz[element]==23){
+				niz.splice(element,2,65,85);
+			}
+			}
+			document.write('<br/>Ubacili smo 65 i 85 umesto 23 '+niz);
+			
+			var slovo=['A','B','C','D'];
+			
+			var mm=niz.concat(slovo);
+			document.write('<br/> spojili smo nizove'+mm);
+			
+			document.write('<br/> Okrenui smo niz :'+mm.reverse());
+			
+		</script>
+	</body>
+</html>

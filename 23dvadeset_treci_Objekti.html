@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Objekti Dvadeset tri</title>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<script>
+			//napraviti objekat I nacin
+			const auto={
+				proizvodjac:"Volvo",//svojstva
+					model:"s40",
+					zapremina:"1999ccm",
+					'broj vrata':5, 
+					boja:['crvena','plava','zuta','crna','zelena'],
+					prikaz(){//funkcije se u objektima zovu metode
+						return `info: ${this.proizvodjac} je iz Svedske `;
+					}
+			};
+			//const auto=new Object();//II nacin
+			document.write(auto.proizvodjac);//ovo je prvi macin sa .
+			document.write(`<br/> ${auto['proizvodjac']}`);//ovo je drugi nacin prikazivanja sa []
+			document.write(`<br/> broj vrata: ${auto['broj vrata']}`);//ako je razdvojena rec ili rezervisana (number, name)obavezno []
+			document.write(`<br/>Metoda: ${auto.prikaz()}`);//jedan od nacina za prikaz metode
+			document.write(`<br/>Metoda 2: ${auto['prikaz']()}`);//drugi nacin
+			document.write(`<br/>Niz : ${auto['boja']}`);
+			
+			auto.pogon='4x4'; //dodavanje u objekat novog svojstva ili metode
+			document.write(`<br/>Pogon : ${auto.pogon}`);
+			auto.model='s50'; //pregazi staru vrednost
+			document.write(`<br/> Nova vrednost za model : ${auto.model}`);
+			
+			//delete auto.pogon;//obrisi svojstvo
+			//document.write(auto.pogon);
+			
+			for(const svojstvo in auto){
+				document.write(`<br/> Svojstvo je: ${svojstvo}: vrednost je ${auto[svojstvo]}`);
+			}
+			
+			for(const keys of Object.keys(auto)){//ES6 nova petlja kad hocu svojstva
+				document.write(`<br/> Kljuc sa novom petljom je: ${keys}`);
+			}
+			
+			for(const values of Object.values(auto)){//ees6 vrednost svojstava
+				document.write(`<br/> Vrednost je: ${values}`);
+			
+			}
+			
+			for(const[kljuc,vrednost] of Object.entries(auto)){
+				document.write(`<br/> Kljuc : ${kljuc} - Vrednost : ${vrednost}`);
+			}
+		</script>
+	
+	</body>
+	
+</html>

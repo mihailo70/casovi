@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Vezbanje spread operator trideseti termin</title>
+		
+	</head>
+	<body>
+		<script>
+			//spread operator pozivanje dva niza pomocu '...' ES6
+			let a=[1,2,3,4];
+			let b=[5,6];
+			let c=[...a,...b,7,8];
+			
+			document.write(c); 
+			
+			//ako koristimo u funkciji to je 'rest' operator
+			//kad ne znam koliko ce biti parametara onda stavimo ...b
+			function brojevi(a,...b){
+				return b;
+				
+			}
+			var h=brojevi(4,3,2,5,6,7,4,3,6);
+			document.write('<br/>'+h);
+			
+		
+			function brojevi1(a,b,...c){
+				document.write('<br/>'+a+'<br/>'+b+'<br/>'+c);
+				
+			}
+			brojevi1(4,3,2,5,6,7,4,3,6);
+			
+			//Destruction destrukturiranje
+			
+			var niz=[5,3,8,9,2,4,6,11,12,13];
+			var a1,b1,c1,d1,e1,f1,g1,rest;
+			[a1,b1,c1,d1,e1,f1,g1,...rest]=niz;
+			document.write('<br/>'+d1);
+			document.write('<br/>'+a1);
+			document.write('<br/>'+c1);
+			document.write('<br/>'+f1);
+			document.write('<br/>'+g1);
+			document.write('<br/>'+b1);
+			document.write('<br/>'+e1);
+			document.write('<br/>'+rest);
+			
+			var niz2=[5,3,8,9,2,4,6,11,12,13];
+				let ja, ti, on, oni,rest1; 
+			[ja,,,,ti,on,oni,...rest1]=niz2;//preskacem 3 elementa niza
+			document.write('<br/>'+ja);
+			document.write('<br/>'+ti);
+			document.write('<br/>'+on);
+			document.write('<br/>'+oni);
+			document.write('<br/>'+rest);
+			
+			var posao={ime:'programer',jezik: 'javascript'};
+			document.write('<br/>'+posao.jezik);
+			
+			var kk,tt,;
+			[kk,tt]=[posao.ime,posao.jezik];
+			document.write(kk+tt);
+			
+		</script>
+	
+	</body>
+	
+</html>

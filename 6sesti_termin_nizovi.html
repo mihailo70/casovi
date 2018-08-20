@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - 6 termin nizovi</title> 
+		<script src="#" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<script>
+			var niz=new Array(0,1,2,3,4,5,6);//prvi nacin za kreiranje niza
+			var niz2=[3,2,8,5,9,10,6];//drugi nacin
+			
+			niz[0]='Beograd';
+			niz[1]='Novi sad';
+			niz[6]='Kragujevac';
+			niz[3]='Valjevo';
+			niz[1]='Subotica';//ovo ce pregaziti postojecu poziciju
+			
+			delete niz[3];
+			
+			
+			document.write('Stampa pozicije 2 u nizu2:'+niz2[2]);
+			document.write('<br/>Elementi niza su:'+niz);
+			document.write('<br/> Duzina niza je:'+niz.length);
+			//document.write('<br/> Sortiranje niza:'+niz.sort());
+			
+			document.write('<br/>Elementi niza2 su:'+niz2);
+			document.write('<br/> Duzina niza2 je:'+niz2.length);
+			
+			var niz3=[3,11,15,20,18,1,4,44,21];
+			document.write('<br/> Sortiranje niza3:'+niz3.sort());//sortira kao text
+			var sort_niz=niz3.sort(function(a,b){return a-b;});//sort kao num
+			document.write('<br/> Sortiranje niza3 kao numerik:'+sort_niz);
+			var sort_niz=niz3.sort(function(a,b){return b-a;});
+			document.write('<br/> Sortiranje niza3 kao numerik desc:'+sort_niz);
+			
+			document.write('<br/>Niz kao string:<br/>Grad: '+niz.join(';<br/>Grad: ')+';');//pretvara u string ceo niz
+			
+			niz.push('Vranje'); //dodaj nesto u niz
+			document.write('<br/>Dodao mi Vranje na kraj niza: '+niz);
+			
+			niz.pop();//ukloni zadnji u nizu
+			document.write('<br/>Uklonio mi Vranje sa kraja niza:' +niz);
+			
+			niz.shift();//ukloni prvi element u nizu
+			document.write('<br/>Uklonio mi prvi u nizu:' +niz);
+			
+			niz.unshift('Beograd','Loznica','Sabac');//dodaj na pocetak
+			document.write('<br/>Dodao mi prve u nizu:' +niz);
+			
+			
+		</script>
+	</body>
+	
+</html>

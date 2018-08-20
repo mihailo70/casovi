@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Objekti II deo Dvadeset cetiri</title>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<script>
+			const laptop = {
+				model:"Toshiba",
+				dijagonala:15.6,
+				procesor:"i7",
+				hdd:"ssd-500gb",
+				grafika:"GForce 960Mx",
+				ram:"8GB",
+				specifikacija(){
+				
+					/*//jedan od nacina iscitavanja vrednosti objekta
+					return `Model: ${this.model}<br/>
+							Dijagonala:${this.dijagonala}<br/>
+							Procesor: ${this.procesor}<br/>
+							HDD: ${this.hdd}<br/>
+							Grafika ${this.grafika}<br/>
+							Ram: ${this.ram}<br/>
+							`;
+				
+				*/
+				//drugi nacin iscitavanja vrednosti objekta
+				
+				for(const [keys,values] of Object.entries(laptop)){
+					document.write(`<br/> ${keys} : ${values}`);
+					}
+				}
+			}
+			laptop.specifikacija();
+			
+			const serija=Symbol('Treci kamen od sunca'); //symbol
+			
+			const heroji={superman:"Clark Kent", 
+						batman: "Brus Wayne",
+						spiderman:"Peter Parker",
+						['Wonder'+' '+ 'Woman']:'Diana', //ako ima dve reci
+						[serija]:'Moja serija'
+						}
+			document.write(`<br/> ${heroji.superman}`);
+			document.write(`<br/> ${heroji['Wonder Woman']}`);
+			document.write('<br/>'+heroji[serija])//pozivanje simbola bez navodnika i bez tacke
+			
+			
+			//pravljenje objekata pomocu funkcijskog konstruktora
+			const igra=function(broj=6,i=3){
+				this.broj=broj;
+				this.igrac=i;
+				this.prikaz=function(){
+					return `<br/> Broj igraca je: ${i},a izvuceni broj je: ${Math.floor(Math.random()*this.broj)+1}`;
+				}
+			}
+			
+			const igra2=new igra();//instanca od objekta tih instanci mozemo napraviti vise njih
+			document.write(igra2.prikaz());
+			const igra3=new igra();
+			document.write(`<br/>nova instanca: ${igra3.prikaz()}`);
+			
+			//ugnjezdeni objekti nested object
+			const more={
+				more1:{zemlja:'Grcka',registracija:'GR'},
+				more2:{zemlja:'Crna Gora',registracija:'MN'},
+				more3:{zemlja3:'Turska',registracija3:'TR'},
+				
+			}
+			document.write(`<br/> ${more.more1.zemlja}`);
+			document.write(`<br/> ${more['more1'].zemlja}`);//moze i ovako
+			document.write(`<br/> ${more['more1']['zemlja']}`);//a moze i ovako
+			
+			
+			//Upotreba objekta u funkciji
+			function podaci({pozdrav='Hello',ime, prezime}){
+				document.write(`${pozdrav} Vase ime je ${ime} ,prezime je: ${prezime}`);
+			
+			}
+			podaci ({ime:'Zoran', prezime: 'Jovanovic'});
+		</script>
+	
+	</body>
+	
+</html>

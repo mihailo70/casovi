@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title>Sesnaesti termin - funkcije</title>
+	<script src="#" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/still2.css" media="all"/>
+	
+	
+	<style>
+	
+	</style>
+</head>
+	<body>
+		<script>
+			function ime(name){
+				return name;
+			
+			}
+		
+			document.write('Vase ime je: '+ime('Veljko'));
+			
+			//anonimna funkcija
+			var zbir=function(a,b){return a+b;}
+			document.write('<br/>'+zbir(9,5));
+			
+			//direktna funkcija ili samo pozivajuca ES6
+			(function j(a,b,c){
+			document.write('<br/>Vrednost za a je :' +a+'<br/>Vrednost za a je :'+b+'<br/>Vrednost za c je :'+c);
+		}(3,9,11));
+			
+			
+			
+			//skracena funkcije Arrow ES6
+			var ime2=(name2)=>(name2);
+			document.write('<br/>vase ime je :'+ime2('Sanja'));
+			
+			var brojevi=(a,b,c,d,e,f)=>(Math.max(a,b,c,d,e,f));
+			document.write('<br/>Najveci broj je: '+brojevi(3,8,6,23,17,18));
+			
+			var a=()=>('<br/>Vrednost broja A je 50 ');
+			document.write(a());
+			
+			var direkt=(a,b,c)=>('<br/>Vrednost za a je :' +a+'<br/>Vrednost za a je :'+b+'<br/>Vrednost za c je :'+c);
+			document.write(direkt(3,9,11));//nije direktna
+			
+			function userName(a, b){
+				document.write('<br/>Vase korisnicko ime je :' +a+' , lozinka je: '+b+'!'); 
+			
+			}
+			userName('bitanga','princeza');
+			
+			//ES6 template string znak je bek tik
+			function userName(a, b){
+				document.write(`<br/>Vase korisnicko ime je : ${a} , lozinka je: ${b}!`); 
+			
+			}
+			userName('bitanga','princeza');
+			
+			var broj = (19.3);
+			document.write(`<br/>Broj stepenovan na kvadrat iznosi: ${Math.pow(broj,2)}`); 
+			document.write(`<br/>Broj zaokruzena na celi broj je: ${Math.round(broj)}`);
+			document.write(`<br/>Slucajan broj je : ${Math.round(Math.random()*100)}`);
+			document.write(`<br/>Vrednost broja Pi je ${Math.PI}`);
+			
+			//es6
+			with(Math){
+				document.write(`<br/>Broj stepenovan na kvadrat iznosi: ${pow(broj,2)}`); 
+				document.write(`<br/>Broj zaokruzena na celi broj je: ${round(broj)}`);
+				document.write(`<br/>Slucajan broj je : ${round(random()*100)}`);
+				document.write(`<br/>Vrednost broja Pi je ${PI}`);
+			
+			}
+			
+			
+		</script>
+	</body>
+	
+</html>

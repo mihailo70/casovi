@@ -1,0 +1,181 @@
+body {
+	background-image:url(../images/bgd.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	margin:0;
+}
+#main_frame{
+	display: block;
+    margin:1% 15% ;
+    width: 70%;
+	height:auto;
+    padding: 0px;
+	float:left;
+}
+header{
+	width:100%;
+	margin:0;
+	border:none;
+	height:auto;
+	float:right;
+	}
+.logo{
+	
+	float:left;
+	margin:0;
+	padding:0;
+	
+	}
+.logo h1{
+	margin:0;
+	font-size:3em;
+	padding:0;
+	float:left;
+	text-align:left;
+	}
+.logo h2{
+	margin:5px 0 0 20px;
+	font-size:1em;
+	float:left;
+	position:absolute;
+	top:8%;
+	left:17%;
+	}
+.content1{
+	float:right;
+	width:75%;
+	margin-top:0;
+	padding-top:0;
+	margin-right:17px;
+}
+
+.content1 ul{	
+	width:100%;
+	padding:0;
+	box-sizing:border-box;
+	background:none;
+	
+				}
+
+.content1 ul li{
+	display:inline-block;
+	line-height:40px;
+	float:right;
+	
+				}
+.content1 ul li a{
+	text-decoration:none;
+	padding:0 10px;
+	font-size:14px;
+	color:grey;
+				}
+.content1 ul li a:hover{
+				color:red;
+				line-height:30px;
+				background:rgb(255,218,209);
+				}
+#content2{
+	float:right;
+	width:75%;
+	margin-right:17px;
+	padding:0;
+	border:1px solid black;
+	height:36px;
+	margin-top:0;
+	margin-bottom:0;
+	
+}
+
+#content2 ul{	
+	width:100%;
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	background:white;
+	height:40px;
+	float:right;
+				}
+#content2 ul li{
+	display:inline-block;
+	
+				}
+#content2 ul li a{
+	text-decoration:none;
+	padding:0 10px;
+	font-size:18px;
+	color:grey;
+	line-height:40px;
+	display:inline-block;
+
+				}
+#content2 ul li a:hover{
+				color:white;
+				background:red;
+				line-height:40px;
+				margin:0;
+				padding:0 10px;
+				}
+.images{
+	float:left;
+	margin:0;
+	padding:5px 5px;
+	width:48%;
+	border:1px solid black;
+	background-color:white;
+	height:auto;
+}
+.images img{
+	width:500px;
+	height:300px;	
+	margin-left:3px;
+
+}
+.images h3{
+	color:red;
+	margin:0;
+}
+.images h2{
+	margin:0;
+}
+.images p{
+	margin:0;
+}
+.images h4{
+	margin:0;
+}
+.images2{
+	float:left;
+	margin:0;
+	padding:5px 5px;
+	width:48%;
+	border:1px solid black;
+	background-color:white;
+	height:auto;
+}
+.images2 img{
+	width:45%;
+	margin:0;
+	float:right;
+	height:150px;
+	padding:0;
+}
+.images2 h3{
+	color:red;
+	margin:0;
+}
+.images2 h2{
+	margin:0;
+}
+.images2 p{
+	margin:0;
+}
+.images2 h4{
+	margin:0;
+}
+footer p{
+	width:100%;
+	text-align:center;
+	float:left;
+	margin:auto;
+}

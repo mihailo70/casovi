@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Dom elementi Dvadeset dva</title>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<script>
+		
+			/*ovo mogu direktno da koristim
+			document.body
+			document.images
+			document.links
+			document.anchorn
+			document.forms
+			*/
+			var niz=['images/slika1.jpg','images/slika2.jpg','images/slika3.jpg'];
+			for(var i=0; i<niz.length; i++){
+				var slika=document.createElement('img');
+				document.body.appendChild(slika);
+				document.images[i].src=niz[i];
+				slika=document.images[i];
+				slika.style.width='200px';
+				//slika.setAtribute('alt','slika');
+				//slika.style.position=relative;
+			}
+			
+		</script>
+	
+	</body>
+	
+</html>

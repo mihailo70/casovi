@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+	<script>
+		function prikaz(){		
+			//var element=document.getElementsByTagName('p')[0];
+			
+			//lista1=element.firstElementChild;//uzimam prvi element od ul a ima i lastElementChild
+			//lista2=lista1.nextElementSibling;//pozivam sledeci
+			//lista3=lista2.nextElementSibling;
+			//lista4=lista3.nextElementSibling;
+			
+			var element=document.getElementsByTagName('li');
+			var z=element.length;
+			for(var i=0; i<z; i++){
+				var unos=prompt('Unesite zeljeni tekst!');
+				element[i].innerText=unos;
+				
+				/*
+				lista2.innerText='Banane';
+				lista3.innerText='Mango';
+				lista4.innerText='Limun';
+				
+				*/
+				}
+			}
+			
+			
+		</script>
+
+
+		<title>Dom elementi</title>
+		<style>
+			.p2{fon-size:19px;}
+		</style>
+	</head>
+	<body>
+		<h1 id="naslov">Naslov</h1>
+		<p>Neki pasus, koji postoji</p>
+		<ul class="lista">
+			<li>Beograd</li>
+			<li>Nis</li>
+			<li>Novi Sad</li>
+			<li>Kragujevac</li>
+		</ul>
+		<button type="button" name="prikaz" onclick="prikaz()">Click to view text!</button>			
+					
+		<script>
+			var li=document.createElement('li');//kreiramo novi element u li
+			var ul=document.getElementsByTagName('ul')[0];
+			ul.appendChild(li);//ubaci u postojeci element novi element
+			var t=li.innerText='Subotica';
+			
+			
+			//ul.insertBefore(li, ul.firstElementChild);//postavi na prvu poziciju
+			//ul.insertBefore(li, ul.lastElementChild);//postavi na zadnju poziciju
+			ul.insertBefore(li, ul.childNodes[2]);//postavi na poziciju
+			
+			var h2=document.createElement('h2');
+			h2.innerText='Neki novi podnaslov';
+			document.body.appendChild(h2);
+			h2.setAttribute('id','podnaslov');
+			
+			
+		</script>
+	</body>
+	
+</html>

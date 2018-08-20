@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	
+	
+
+		<title>Dom elementi</title>
+	<style>
+		.p2{fon-size:19px;}
+	</style>
+</head>
+	<body>
+		<h1>Naslov sadrzaja</h1>
+		<p>Neki tekst koji se nalazi u pasusu</p>
+		<p class="p2">Neki tekst koji se nalazi u pasusu1</p>
+		<p>Neki tekst koji se nalazi u pasusu2</p>
+		<p>Neki tekst koji se nalazi u pasusu3</p>
+		<p>Neki tekst koji se nalazi u pasusu4</p>
+		<div id="okvir">
+			tekst za div
+			<img src="slika.jpg" alt="nek slika" width="150" height="150"/>
+			
+		</div>
+		<script>
+			var element=document.getElementById('okvir');//pozivam ceo fajl naredbom document; 
+			//GetElementsById pronadji neki element po ID iz diva
+			var element=element.innerText;
+			document.write('<br/>Ovo je tekst iz diva po ElementId:'+element);
+			var element2=document.getElementsByTagName('p')[0];//getElementsByTagName pozivam po imenu taga
+			var element2=element2.innerText;
+			document.write('<br/>Ovo je tekst iz diva po tagu :'+element2);
+			var element3=document.getElementsByClassName('p2')[0];//pozivam po nazivu klase 
+			var element3=element3.innerText;
+			document.write('<br/>Ovo je tekst iz diva po nazivu klase:'+element3);
+		
+		</script>
+		
+	</body>
+	
+</html>

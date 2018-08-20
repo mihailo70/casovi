@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Vezba prosti brojevi</title>
+		<link rel="stylesheet" href="css/qode.css" media="all"/>
+		<meta charset="utf-8" />
+		
+					
+	</head>
+	<body>
+		<script>
+			var niz=new Array();
+			var m=0;
+			var broj = prompt('Upisite broj');
+			broj =parseInt(broj);
+				prosti(broj);//function statement kad pozivam funkciju pre njenog definisanja
+				//x=function... function extension
+			
+			function prosti(broj){//ako ovako pisem mogu pozivati odakle hocu ali ako je dodeljujem nekoj vrednosti onda ne x=function...
+				for (i=1;i<=broj;i++){
+				for(n=2;n<=100;n++){
+					if( i!=n&&i%n==0||i==2){
+						 m=1;
+						}
+											
+				}
+				if (m!=1){
+						niz.push(i);
+						 }
+				m=0;
+			}
+			document.write('<p>Prosti brojevi su: </p>'+niz);
+			document.write('<p>Ima ih: </p>'+niz.length);
+			}
+		
+			var g=function sum(c,d){return c+d};
+			g(5,3);//function extension
+			
+		</script>
+	</body>
+</html>

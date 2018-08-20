@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Vezbanje Dvadeset sedmi</title>
+		
+	</head>
+	<body>
+	<script>
+		var niz=[['Pele','Maradona', 'Bekenbauer'],['Centar','Vezni','Odbrana'],['Santos','Boka', 'Bajern']];
+		
+		var select=document.createElement('select');
+			document.body.appendChild(select);
+			select.setAttribute('name','fudbaleri');
+			var stavka=document.createElement('option');
+			stavka.innerText='Izaberi opciju';
+			select.appendChild(stavka);
+		
+		for(var i=0; i<niz.length; i++){
+			for(var u=0; u<niz.length; u++){
+				var stavke=document.createElement('option');
+				stavke.setAttribute('value','#');
+				stavke.innerText= niz[u][i];
+				select.appendChild(stavke);
+			}
+		}
+		
+	
+	</script>
+	
+	</body>
+	
+</html>

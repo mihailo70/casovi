@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Photo Galery</title>
+		<link rel="stylesheet" href="../css/baki.css" media="all"/>
+		<meta charset="utf-8"/>
+	</head>
+	
+	<body>
+	<div id="main_frame1">
+		<header>
+			<!--Images in header-->
+			<img style="float:left;" src="../photo/LOGO.png" alt="Photo Balsa" height="80" width="80" padding=0/>
+			<img style="float:right;" src="../photo/LOGO.png" alt="Photo Balsa" height="80" width="80" padding=0/>
+			<h1>PHOTO STUDIO BALSA</h1>					
+		
+		</header>
+		
+		<div class="slideshow-container">
+			<img src="../photo/IMG_2982.jpg"  style="width:100%">
+		</div>
+		<script>
+			
+			//creating navigation many
+				var array1=['About us','About photo','Galery','Contact us'];//Arrey for nav many
+				
+				document.write('<div id="content">');
+				
+				var content=document.getElementById('content');
+				
+				var list1=document.createElement('ul');
+				for(var i=0; i<array1.length;i++){
+					var item1=document.createElement('li');
+					list1.appendChild(item1);
+					var link=document.createElement('a');
+					if (i==2){link.setAttribute('href','prod/galery.html');}
+					else{
+					link.setAttribute('href','#');	//added link		
+					}
+					link.innerText=array1[i];
+					item1.appendChild(link);
+					list1.appendChild(item1);
+					
+					}
+					content.appendChild(list1);
+				
+				
+				//style for hover
+				var style1=document.createElement('style');
+				var head=document.head;
+				head.appendChild(style1);
+				var a=document.createElement(a);
+				style1.appendChild(a);
+			
+			document.write('<div id="galery"'>');
+				document.write('<a href ="velikaslika.html" target = "_blank"> <img src = "../photo/html/IMG_1992.jpg" width = "100px" height = "70px" alt = "Sunrays" title= "Click for big picture" /> </a>');
+				document.write('<a href ="velikaslika.html" target = "_blank"> <img src = "../photo/html/IMG_3183.jpg" width = "100px" height = "70px" alt = "Sunrays" title= "Click for big picture" /> </a>');
+			document.write('</div>);
+		</script>
+			
+		
+		<footer>
+			<p>Site design by M.B.</p>
+		</footer>
+	</div><!--end of main_frame--> 
+	</body>
+</html>
