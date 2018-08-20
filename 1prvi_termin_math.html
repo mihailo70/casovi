@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Javascript - prvi termin</title> 
+		<script src="script/javascript.js" type="text/javascript"></script>
+		<script>
+		//komentar u jednom redu moze i 
+		/*document.write("danas je lep i suncan dan" );
+		document.write(' <div id="Ime">Sadrzaj </div> ' );
+		alert("Evo me pojavio sam se!");
+		*/
+		</script>
+	</head>
+	
+	<body>
+		<script>
+			var ime='Ilija'; //varijabla
+			var prezime='Petkovic';
+			var brojgodina='53';
+			var brojac;
+			brojac=1;
+			document.write('<br/>'+ime+' '+prezime+' '+brojgodina)
+			document.write('<br/>'+ime+brojac);
+			brojac=2;
+			document.write('<br/>'+ime+brojac);
+			var rez=brojgodina%11; // %je ostatak od deljenja
+			//alert (rez);
+		</script>
+		
+		<h2>Neki naslov</h2>
+		<script>
+			//alert(b);
+			//alert (brojac);
+			//brojgodina++;//uvecava za 1 //kad je ++ispred naziva onda se ona uvecava prvo pa dodljuje levoj strani
+			var c=brojgodina++;//prvo se broj godina dodeljuje u C a onda poveca za 1
+			document.write('broj godina je uvecan za 1  '+brojgodina);
+			var c = brojgodina--;
+			//var c=(brojgodina+5)*2;
+			document.write('<br/>broj godina je'+brojgodina);
+			document.write('<br/> Ovo je c '+c);
+			var g=5;
+			 
+			 //g=g+2;
+			document.write('<br/>'+g);
+			 g+=2; //skraceni oblik od g=g+2
+			 g-=3;//g=g-3
+			 g*=4;//g=g*4
+			 g/=3;
+			 document.write('<br/> Ovo je deljenje '+g);
+			 //g%=2;
+			//document.write('<br/> Ovo je ostatak od deljenja <strong>'+g+'</strong>');
+			var broj=-6;
+			var koren=Math.sqrt(g);//korenovanje
+			//alert (koren);
+			var abs=Math.abs(broj);//Apsolutna vrednost
+				//alert (abs);
+			var zaokruzenje = Math.round(g);
+			
+			//alert (g);
+			//alert (zaokruzenje);
+			var broj = 4.46657;
+			document.write('<br/>Zaokruzi na dve decimale :' +broj.toFixed(2));
+			
+			var ZaokruziVeci=Math.ceil(g);
+			//alert (ZaokruziVeci);
+			var manji=Math.floor(g);
+			//alert (manji);
+			
+			var SlBroj=Math.round(Math.random()*100);
+			//alert (SlBroj);
+			var sin=Math.sin(g);
+			//alert (sin);
+			
+			var cos=Math.cos(g);
+			//alert (cos);
+			
+			var stepen=Math.pow(Math.round(g),3);
+			//alert (stepen);
+			
+			var e=Math.E;
+			//alert (e);
+			var pi=Math.PI;
+			//alert (pi);
+			/*
+			>
+			<
+			<=
+			>=
+			<>
+			!=
+			5==	'5'//T
+			5==='5'//F
+			5!=='5'//T
+			
+			&&
+			||
+			*/
+			/*
+			if(g>6){
+				document.write('<br/>jeste g vece od 6');
+				document.write('<br/>uradi nesto sa g');
+				document.write('<br/>Sta da uradim');
+				document.write('<br/>Pomnozi sa 4');
+				g*=4;
+				document.write('<br/> Rezultat mnozenja je '+g );
+			}
+			else if(Math.round(g)==5) {
+				document.write('broj g je jednak sa 5');
+				var k =5;
+				document.write(k);
+				document.write('bilo sta');
+				}
+			else{
+				document.write('<br/>Broj g nije veci od '+g);
+			
+			}
+			*/
+			/*
+			var b=25;
+			var vzb= Math.round(Math.random()*50);
+			document.write('<br/>Moj broj :'+vzb);
+			if(vzb==b){
+			 document.write('Bravo');
+			}
+				else if(Math.abs(vzb-b)<=10) {
+			document.write('Blizu');
+			}
+			else if((Math.abs(vzb-b)>10)||(Math.abs(b-vzb)>10)){
+			document.write('</br/>vece');
+			}
+			*/
+			var a=7;
+			var b=10;
+			if(((a>5)||(b<10)) && ((a==6)||(a==7))) {
+				document.write('<br/>A je ili 6 ili 7');
+			}
+			
+			var auto='Mercedes';
+			var model='C klasa' ;
+			var snaga='450';
+			/*
+			if (auto=='Mercedes'){
+				if(model=='C klasa'){
+					if (snaga=='450'){
+					document.write('To je Mercedes C klase i snage 450KW');
+					}else {
+					document.write('To nije ta snaga')
+					}
+				} else {
+					document.write('To nije taj model')
+					}
+			}
+			*/
+		</script>
+		
+	</body>
+
+</html>
